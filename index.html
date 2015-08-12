@@ -223,6 +223,11 @@
 //   However, the library has no jQuery dependency
 $(document).ready(function() {
 $(function(){
+
+
+
+  var id;
+  var access;
 // Initialize library
 SE.init({ 
     // Parameters obtained by registering an app, these are specific to the SE
@@ -255,6 +260,10 @@ $('#login-button').click(function() {
                 data.networkUsers[0].account_id + ', got access token = ' + 
                 data.accessToken
             );
+           id= data.networkUsers[0].account_id;
+           access = data.accessToken;
+           console.log(id);
+           console.log(access);
         },
         error: function(data) { 
 
