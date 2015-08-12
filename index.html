@@ -94,12 +94,23 @@
           <span class="sr-only">Next</span>
         </a>
         </div>
-        <br>
-        <button type="button"id='login-button' class="btn btn-primary btn-lg center-block">log In</button>
+      
+        
 
       </div>
     </div>
+
+    <div class="col-md-12">
+
+    <div class="well recent" >
+      <h2>Profile stuff
+        <button type="button"id='login-button' class="btn btn-primary btn-lg pull-right">Log In</button>
+</h2>
+    </div>
+    </div>
     <div class="result"></div>
+
+
 
     <div class="col-md-8">
       <div class="well recent" ><h2>Recent Questions</h2></div>
@@ -122,7 +133,7 @@
               
 
               
-              <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <span class="glyphicon glyphicon-chevron-up"></span></em>
+              <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button></em>
                     <div class="answer">
                       <ul ><br><br>
                       
@@ -216,15 +227,17 @@ $(function(){
 SE.init({ 
     // Parameters obtained by registering an app, these are specific to the SE
     //   documentation site
+
     clientId: 5345, 
     key: 'C3XsC1VXoWOuirD0IlisuQ((', 
     // Used for cross domain communication, it will be validated
-    channelUrl: 'davideighmey.github.io/',
+    channelUrl: 'http://davideighmey.github.io/proxy.html',
     // Called when all initialization is finished
     complete: function(data) { 
-        $('nav-bar #login-button')
+        console.log(data);
+        $('#login-button')
             .removeAttr('disabled')
-            .text('login '+data.version); 
+            .text('Login '); 
     }
 });
 
@@ -234,6 +247,7 @@ $('#login-button').click(function() {
     // Make the authentication call, note that being in an onclick handler
     //   is important; most browsers will hide windows opened without a
     //   'click blessing'
+    
     SE.authenticate({
         success: function(data) { 
             alert(
@@ -243,6 +257,7 @@ $('#login-button').click(function() {
             );
         },
         error: function(data) { 
+
             alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
         },
         networkUsers: true
@@ -250,5 +265,6 @@ $('#login-button').click(function() {
 });
 });
 });
+
 </script>
 </html>
