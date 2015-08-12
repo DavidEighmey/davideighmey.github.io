@@ -103,9 +103,24 @@
     <div class="col-md-12">
 
     <div class="well recent" >
-      <h2>Profile stuff
-        <button type="button"id='login-button' class="btn btn-primary btn-lg pull-right">Log In</button>
+      <h2>Profile
+        <button type="button"id='login-button' class="btn btn-primary pull-right">Log In</button>
+
 </h2>
+
+            <div class="panel panel-default">
+
+            <div class="panel-heading">
+
+               <h3 class="panel-title">Info</h3>
+            </div>
+            <div class="panel-body">
+              <button type="button" class="btn btn-primary pull-right">See profile</button>
+
+              <div id="profile">
+              </div>
+          </div>
+
     </div>
     </div>
     <div class="result"></div>
@@ -272,6 +287,30 @@ $('#login-button').click(function() {
         networkUsers: true
     });
 });
+///2.2/users/{ids}/answers?order=desc&sort=activity&site=stackoverflow
+$('#wowButton').click(function() {
+  $.ajax({
+        url: 'https://api.stackexchange.com/2.2/users/'+ id +'/answers?order=desc&sort=activity&site=stackoverflow',
+        success: function (response) {
+            document.getElementById("profile").innerHTML += "Answers: " + response + "<br>";
+        },
+        error: function () { },
+    });
+  $.ajax({
+        url: 'https://api.stackexchange.com/2.2/users/'+ id +'/badges?order=desc&sort=rank&site=stackoverflow',
+        success: function (response) {
+            document.getElementById("profile").innerHTML += "Badges " + response + "<br>";
+        },
+        error: function () { },
+    });
+    $.ajax({
+        url: 'https://api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow',
+        success: function (response) {
+            document.getElementById("profile").innerHTML += "Favorites: " + response + "<br>";
+        },
+        error: function () { },
+    });
+  });
 });
 });
 
