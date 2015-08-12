@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html ng-app="blizz">
+<head>
+  <meta charset="utf-8" />
+  <title>Blizzard Stack Exhange</title>
+<script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+ 
+	<link rel="stylesheet" type="text/css" href="custom.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+      <link rel="stylesheet" type="text/css" href="custom.css">
+
+      <script type='text/javascript' src='custom.js'></script>
+
+
+</head>
+<body>
+	<nav-bar></nav-bar>
+
+
+	<div class="col-md-12">
+
+    <div class="well recent" >
+      <h2>Profile
+        <button type="button"id='login-button' class="btn btn-primary pull-right">Log In</button>
+
+		</h2>
+
+            <div class="well">
+
+          
+
+               
+        
+              <button type="button" id="profileButton" class="btn btn-primary pull-right">See Profile</button>
+
+              
+              <div id="profile">
+              </div>
+              <br><br><br>
+          </div>
+
+    </div>
+    </div>
+
+
+	<search-questions></search-questions>
+
+</body>
+
+<script type='text/javascript'>
+// For simplicity, we're using jQuery for some things
+//   However, the library has no jQuery dependency
+$(document).ready(function() {
+$(function(){
+
+
+
+  var id;
+  var access;
+// Initialize library
+SE.init({ 
+    // Parameters obtained by registering an app, these are specific to the SE
+    //   documentation site
+
+    clientId: 5345, 
+    key: 'C3XsC1VXoWOuirD0IlisuQ((', 
+    // Used for cross domain communication, it will be validated
+    channelUrl: 'http://davideighmey.github.io/proxy',
+    // Called when all initialization is finished
+    complete: function(data) { 
+        console.log(data);
+        $('#login-button')
+            .removeAttr('disabled')
+            .text('Login '); 
+    }
+});
+
+// Attach click handler to login button
+$('#login-button').click(function() {
+  console.log("Log In Clicked");
+    // Make the authentication call, note that being in an onclick handler
+    //   is important; most browsers will hide windows opened without a
+    //   'click blessing'
+    
+    SE.authenticate({
+        success: function(data) { 
+            alert(
+                'User Authorized with account id = ' + 
+                data.networkUsers[0].account_id + ', got access token = ' + 
+                data.accessToken
+            );
+           id= data.networkUsers[0].account_id;
+           access = data.accessToken;
+           console.log(id);
+           console.log(access);
+        },
+        error: function(data) { 
+
+            alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
+        },
+        networkUsers: true
+    });
+});
+///2.2/users/{ids}/answers?order=desc&sort=activity&site=stackoverflow
+$('#profileButton').click(function() {
+  $.ajax({
+        url: 'https://api.stackexchange.com/2.2/users/'+ id +'/answers?order=desc&sort=activity&site=stackoverflow',
+        success: function (response) {
+            console.log(response);
+            console.log(response);
+            
+            if (response.has_more == false){
+              document.getElementById("profile").innerHTML +="Answers: 0 <br>";
+            } else {
+              for (var i in response.items){
+                document.getElementById("profile").innerHTML += "Answer: <a href=" + i.link+ ">" + i.title +"</a><br>"
+              }
+            }
+           
+        },
+        error: function () { },
+    });
+  $.ajax({
+        url: 'https://api.stackexchange.com/2.2/users/'+ id +'/badges?order=desc&sort=rank&site=stackoverflow',
+        success: function (response) {
+            console.log(response);
+             if (response.has_more == false){
+              document.getElementById("profile").innerHTML += "Badges: 0 <br>";
+            } else {
+              for (var i in response.items){
+                document.getElementById("profile").innerHTML += "Badges: <a href=" + i.owner.link+ ">" + i.badge_id +"</a><br>"
+              }
+            }
+        },
+        error: function () { },
+    });
+    $.ajax({
+        url: 'https://api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow',
+        success: function (response) {
+          console.log(response);
+           if (response.has_more == false){
+              document.getElementById("profile").innerHTML +="Favorites: 0 <br>";
+            } else {
+              for (var i in response.items){
+                document.getElementById("profile").innerHTML += "Favorites: <a href=" + i.link+ ">" + i.title +"</a><br>"
+              }
+            }
+        },
+        error: function () { },
+    });
+  });
+});
+});
+
+</script>
+</html>
