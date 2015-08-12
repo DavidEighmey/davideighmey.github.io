@@ -65,6 +65,9 @@ body {
 	color: #000000;
 
 }
+#tagsButtonFont{
+	color: #000000;
+}
 #badgesHeader{
 	background: url("img/legion3.jpg");
 	color:#FFFFFF;
