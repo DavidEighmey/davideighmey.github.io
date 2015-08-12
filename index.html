@@ -94,6 +94,9 @@
           <span class="sr-only">Next</span>
         </a>
         </div>
+        <br>
+        <button type="button"id='login-button' class="btn btn-primary btn-lg center-block">log In</button>
+
       </div>
     </div>
     <div class="result"></div>
@@ -207,6 +210,7 @@
 <script type='text/javascript'>
 // For simplicity, we're using jQuery for some things
 //   However, the library has no jQuery dependency
+$(document).ready(function() {
 $(function(){
 // Initialize library
 SE.init({ 
@@ -218,7 +222,7 @@ SE.init({
     channelUrl: 'http://davideighmey.github.io/',
     // Called when all initialization is finished
     complete: function(data) { 
-        $('#login-button')
+        $('nav-bar #login-button')
             .removeAttr('disabled')
             .text('login '+data.version); 
     }
@@ -237,13 +241,13 @@ $('#login-button').click(function() {
                 data.networkUsers[0].account_id + ', got access token = ' + 
                 data.accessToken
             );
-            login=true; 
         },
         error: function(data) { 
             alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
         },
         networkUsers: true
     });
+});
 });
 });
 </script>
