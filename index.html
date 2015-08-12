@@ -298,7 +298,7 @@ $('#profileButton').click(function() {
             console.log(response);
             console.log(response);
             if (response.has_more == false){
-              "Answers: 0 <br>"
+              document.getElementById("profile").innerHTML +="Answers: 0 <br>";
             }
             for(var i = 0; i < response.length; i ++){
               document.getElementById("profile").innerHTML += "Answers: " + response + "<br>";
@@ -310,9 +310,9 @@ $('#profileButton').click(function() {
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/badges?order=desc&sort=rank&site=stackoverflow',
         success: function (response) {
              if (response.has_more == false){
-              "badges: 0 <br>"
+              document.getElementById("profile").innerHTML += "badges: 0 <br>";
             }
-            document.getElementById("profile").innerHTML += "Badges " + response + "<br>";
+            //document.getElementById("profile").innerHTML += "Badges " + response + "<br>";
         },
         error: function () { },
     });
@@ -320,9 +320,9 @@ $('#profileButton').click(function() {
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
            if (response.has_more == false){
-              "favorites: 0 <br>"
+              document.getElementById("profile").innerHTML +="favorites: 0 <br>";
             }
-            document.getElementById("profile").innerHTML += "Favorites: " + response + "<br>";
+            //document.getElementById("profile").innerHTML += "Favorites: " + response + "<br>";
         },
         error: function () { },
     });
