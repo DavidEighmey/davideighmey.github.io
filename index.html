@@ -298,10 +298,12 @@ $('#profileButton').click(function() {
             
             if (response.has_more == false){
               document.getElementById("profile").innerHTML +="Answers: 0 <br>";
+            } else {
+              for (var i in response.items){
+                document.getElementById("profile").innerHTML += "Answer: <a href=" + i.link+ ">" + i.title +"</a><br>"
+              }
             }
-            /*for(var i = 0; i < response.length; i ++){
-              document.getElementById("profile").innerHTML += "Answers: " + response + "<br>";
-            }*/
+           
         },
         error: function () { },
     });
@@ -311,8 +313,11 @@ $('#profileButton').click(function() {
             console.log(response);
              if (response.has_more == false){
               document.getElementById("profile").innerHTML += "Badges: 0 <br>";
+            } else {
+              for (var i in response.items){
+                document.getElementById("profile").innerHTML += "Badges: <a href=" + i.owner.link+ ">" + i.badge_id +"</a><br>"
+              }
             }
-            //document.getElementById("profile").innerHTML += "Badges " + response + "<br>";
         },
         error: function () { },
     });
@@ -322,8 +327,11 @@ $('#profileButton').click(function() {
           console.log(response);
            if (response.has_more == false){
               document.getElementById("profile").innerHTML +="Favorites: 0 <br>";
+            } else {
+              for (var i in response.items){
+                document.getElementById("profile").innerHTML += "Favorites: <a href=" + i.link+ ">" + i.title +"</a><br>"
+              }
             }
-            //document.getElementById("profile").innerHTML += "Favorites: " + response + "<br>";
         },
         error: function () { },
     });
