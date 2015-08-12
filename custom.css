@@ -68,7 +68,7 @@ body {
 #tagsButtonFont{
 	color: #000000;
 }
-#individualButtons{
+.btn.btn-default.individualButtons{
 	background: #000000;
 }
 #badgesHeader{
