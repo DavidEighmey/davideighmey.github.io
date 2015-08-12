@@ -115,10 +115,12 @@
                <h3 class="panel-title">Info</h3>
             </div>
             <div class="panel-body">
-              <button type="button" id="profile"class="btn btn-primary pull-right">See profile</button>
+              <button type="button" id="profileButton" class="btn btn-primary pull-right">See profile</button>
+
 
               <div id="profile">
               </div>
+              
           </div>
 
     </div>
@@ -288,11 +290,11 @@ $('#login-button').click(function() {
     });
 });
 ///2.2/users/{ids}/answers?order=desc&sort=activity&site=stackoverflow
-$('#profile').click(function() {
+$('#profileButton').click(function() {
   $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/answers?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
-
+            console.log(response);
             document.getElementById("profile").innerHTML += "Answers: " + response + "<br>";
         },
         error: function () { },
@@ -300,6 +302,7 @@ $('#profile').click(function() {
   $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/badges?order=desc&sort=rank&site=stackoverflow',
         success: function (response) {
+          
             document.getElementById("profile").innerHTML += "Badges " + response + "<br>";
         },
         error: function () { },
