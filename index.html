@@ -295,7 +295,7 @@ $('#profileButton').click(function() {
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/answers?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
             console.log(response);
-            for(var i = 0; i < response.items.length; i ++){}
+            for(var i = 0; i < response.items.length; i ++){
               document.getElementById("profile").innerHTML += "Answers: " + response.items[i] + "<br>";
             }
         },
