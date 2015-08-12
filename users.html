@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html ng-app="blizz">
+<head>
+	<script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+ 
+  <link rel="stylesheet" type="text/css" href="custom.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+      <script type='text/javascript' src='custom.js'></script>
+
+
+</head>
+<body>
+	<title>Blizzard Stack Exhange</title>
+	<!-- nav bar -->
+	<nav-bar></nav-bar>
+
+
+<div class="well" id="userHeader">
+       <h1>Top Users</h1>
+
+
+     
+     </div>
+     <div class="users">
+<div class="well" id="userBackground" >
+
+
+<div ng-controller="StoreController as q" >
+
+            <div ng-repeat="user in q.usrs | orderBy:'-reputation'">
+              
+              <div class="panel panel-default">
+
+            <div class="panel-heading">
+
+              <h3 class="panel-title center-block">{{user.name}}</h3>
+          </div>
+             <div class="panel-body">
+              <div class="pull-left"><img ng-src="{{user.image}}" height="100" width="100" />  </div>
+              <h5 class="pull-right">Reputation: {{user.reputation}}</h5>
+            
+              
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+<search-questions></search-questions>
+
+
+
+
+    
+    
+</body>
+
+<script type='text/javascript'>
+// For simplicity, we're using jQuery for some things
+//   However, the library has no jQuery dependency
+$(function(){
+// Initialize library
+SE.init({ 
+    // Parameters obtained by registering an app, these are specific to the SE
+    //   documentation site
+    clientId: 1, 
+    key: 'U4DMV*8nvpm3EOpvf69Rxw((', 
+    // Used for cross domain communication, it will be validated
+    channelUrl: 'https://api.stackexchange.com/docs/proxy',
+    // Called when all initialization is finished
+    complete: function(data) { 
+        $('#login-button')
+            .removeAttr('disabled')
+            .text('Run Example With Version '+data.version); 
+    }
+});
+
+// Attach click handler to login button
+$('#login-button').click(function() {
+
+    // Make the authentication call, note that being in an onclick handler
+    //   is important; most browsers will hide windows opened without a
+    //   'click blessing'
+    SE.authenticate({
+        success: function(data) { 
+            alert(
+                'User Authorized with account id = ' + 
+                data.networkUsers[0].account_id + ', got access token = ' + 
+                data.accessToken
+            ); 
+        },
+        error: function(data) { 
+            alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
+        },
+        networkUsers: true
+    });
+});
+});
+</script>
+</html>

@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+
+            <div class="panel-heading">
+
+              <h3 class="panel-title">{{product.question}}<div class="pull-right"> Asked By: {{product.askedBy}}</div></h3>
+              {{product.askedOn | date}}<div class="pull-right">Tags: {{product.tag}}</div>
+          </div>
+             <div class="panel-body">
+              <em class="pull-left">Answers: {{product.answers.length}}</em>
+              
+              
+              <em class="pull-right">Votes: {{product.votes}}</em>
+                    <div class="answer">
+                      <ul ><br><br>
+                                                         
+                              <h4> Answers </h4>
+                              <li ng-repeat="answer in product.answers">
+
+                                <blockquote>
+                                  <strong>{{answer.upVotes}} Up Votes</strong>
+                                  {{answer.body}}
+                                  <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
+                                </blockquote>
+                              </li>
+                            </ul>
+
+                            <!--  Review Form -->
+                            <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
+                              <!--  Live Preview -->
+                              <blockquote ng-show="answers.answer.body">
+                                
+                                {{answers.answer.body}}
+                                <cite class="clearfix">—{{answers.answer.author}}</cite>
+                              </blockquote>
+
+                              <!--  Review Form -->
+                              <h4>Submit an Answer</h4>
+                              
+                              <fieldset class="form-group">
+                                <textarea ng-model="answers.answer.body" class="form-control" placeholder="Write an Answer" title="Answer"></textarea>
+                              </fieldset>
+                              <fieldset class="form-group">
+                                <input ng-model="answers.answer.author" type="email" class="form-control" placeholder="jimmyDean@sausage.com" title="Email" />
+                              </fieldset>
+                              <fieldset class="form-group">
+                                <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
+                              </fieldset>
+                          </form>
+                      </div>
+              </div>
+            </div>

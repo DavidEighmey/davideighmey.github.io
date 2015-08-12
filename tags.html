@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html ng-app="blizz">
+<head>
+  <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="custom.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!--<script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>-->
+        <script type='text/javascript' src='custom.js'></script>
+    <link rel="stylesheet" type="text/css" href="custom.css">
+
+
+
+</head>
+<body ng-controller="StoreController as q">
+  <title>Blizzard Stack Exhange</title>
+  <!-- nav bar -->
+  <nav-bar></nav-bar>
+
+
+<div class="tagStuff">
+<div class="well" id="tagsHeader">
+<h1>Tags</h1>
+
+</div>
+
+
+<div class="well" id="tagsButtons">
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home"><h3>World Of Warcraft</h3></a></li>
+    <li><a data-toggle="tab" href="#menu1"><h3>StarCraft 2</h3></a></li>
+    <li><a data-toggle="tab" href="#menu2"><h3>HearthStone</h3></a></li>
+    
+ <li><a data-toggle="tab" href="#menu3"><h3>Diablo 3</h3></a></li>
+  <li><a data-toggle="tab" href="#menu4"><h3>Heroes Of The Storm</h3></a></li>
+  <li><a data-toggle="tab" href="#menu5"><h3>OverWatch</h3></a></li>
+  </ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    
+      
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowButton">General</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default"id="wowHordeButton">Horde</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowAllianceButton">Alliance</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowRaidsButton">Raids</button>
+      </div>
+    </div>
+
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowProfessionsButton">Professions</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowRolesButton">Roles</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowFarmingButton">Farming Guides</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowTransmorgButton">Transmogrification</button>
+      </div>
+    </div>
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowAchievementButton">Achievements</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowGearButton">Gear</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowRpButton">RP</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowPvpButton">PvP</button>
+      </div>
+    </div>
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowGarrisonButton">Garrison</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="wowLoreButton">Lore</button>
+      </div>
+     
+      
+    </div>
+
+
+  </div>
+
+  <div id="menu1" class="tab-pane fade">
+    
+
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="sc2Button">General</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="sc2ZergButton">Zerg</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="sc2ProtosButton">Protos</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="sc2TerrianButton">Terrian</button>
+      </div>
+    </div>
+
+
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="sc2CampaignButton">Campaign</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="sc2BuildOrderButton">Build Order</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="sc2EsportsButton">Esports</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="sc2CustomButton">Custom Games</button>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <div id="menu2" class="tab-pane fade">
+    
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        
+        <button type="button" class="btn btn-default"id="hearthstoneButton">General</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hearthstoneAdventureButton">Adventure Mode</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hearthstoneArenaButton">Arena</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default"id="hearthstoneDecksButton">Decks</button>
+      </div>
+       
+    </div>
+
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hearthstoneStreamsButton">Streams</button>
+      </div>
+    
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hearthstoneEsportsButton">E-Sports</button>
+      </div>
+  </div>
+</div>
+
+<div id="menu3" class="tab-pane fade">
+
+
+
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default"id="d3Button">General</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default"id="d3ClassesButton">Classes</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default"id="d3SkillBuildButton">Skill Build</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="d3FollowersButton">Followers</button>
+      </div>
+    </div>
+
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="d3LoreButton">Lore</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="d3AdventureButton">Adventure Mode</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default"id="d3CraftingButton">Crafting</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="d3ConsoleButton">Console Version</button>
+      </div>
+    </div>
+
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="d3CampaignButton">Campaign</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="d3PatchButton">Patch</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="d3AschievmentsButton">Achievments</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="d3ItemsButton">Items</button>
+      </div>
+    </div>
+
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="d3HardcoreButton">HardCore Mode</button>
+      </div> 
+    </div>
+
+
+
+
+</div>
+
+
+
+<div id="menu4" class="tab-pane fade">
+
+
+
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hotsButton">General</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hotsUniverseButton">Universe</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hotsTournamentButton">Tournament</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hotsSkinsButton">Skins</button>
+      </div>
+    </div>
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hotsMapsButton">Maps</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="hotsHeroesButton">Heroes</button>
+      </div>
+      
+    </div>
+
+
+</div>
+
+
+<div id="menu5" class="tab-pane fade">
+
+  <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="owButton">General</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="owRolesButton">Roles</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="owCompetativButton">Competative</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" id="owMapsButton">Maps</button>
+      </div>
+    </div>
+
+</div>
+
+   </div>
+ </div>
+</div>
+<br>
+
+
+  <div class="well" id="tagQuestions">
+
+   <div class="tagHearthStone">
+
+            <div ng-repeat="product in q.products | filter:{tag:'hearthStone'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+      <div class="tagHearthStoneDeck">
+
+            <div ng-repeat="product in q.products | filter:{tag:'hearthStone deck'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+<div class="tagHearthStoneAdventure">
+
+            <div ng-repeat="product in q.products | filter:{tag:'hearthStone adventure'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagHearthStoneArena">
+
+            <div ng-repeat="product in q.products | filter:{tag:'hearthStone arena'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagHearthStoneEsports">
+
+            <div ng-repeat="product in q.products | filter:{tag:'hearthStone esports'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+        <div class="tagHearthStoneStream">
+
+            <div ng-repeat="product in q.products | filter:{tag:'HearthStone stream'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagOverwatch">
+
+            <div ng-repeat="product in q.products | filter:{tag:'overwatch'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+<div class="tagOverwatchHeroes">
+
+            <div ng-repeat="product in q.products | filter:{tag:'overwatch heroes'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagOverwatchRoles">
+
+            <div ng-repeat="product in q.products | filter:{tag:'overwatch roles'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagOverwatchCompetitive">
+
+            <div ng-repeat="product in q.products | filter:{tag:'overwatch competitive'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagOverwatchMaps">
+
+            <div ng-repeat="product in q.products | filter:{tag:'overwatch maps'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+        <div class="tagHeroesoftheStorm">
+
+            <div ng-repeat="product in q.products | filter:{tag:'heroes of the storm'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+        <div class="tagHeroesoftheStormRoles">
+
+            <div ng-repeat="product in q.products | filter:{tag:'heroes of the storm roles'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+      <div class="tagHeroesoftheStormUniverse">
+
+            <div ng-repeat="product in q.products | filter:{tag:'heroes of the storm universe'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+        <div class="tagHeroesoftheStormTournament">
+
+            <div ng-repeat="product in q.products | filter:{tag:'heroes of the storm tournament'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagHeroesoftheStormSkins">
+
+            <div ng-repeat="product in q.products | filter:{tag:'heroes of the storm skins'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagHeroesoftheStormMap">
+
+            <div ng-repeat="product in q.products | filter:{tag:'heroes of the storm map'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+
+        <div class="tagStarcraft2">
+
+            <div ng-repeat="product in q.products | filter:{tag:'starcraft 2'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+        <div class="tagStarcraft2Terrian">
+
+            <div ng-repeat="product in q.products | filter:{tag:'starcraft 2 terrian'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+        <div class="tagStarcraft2Zerg">
+
+            <div ng-repeat="product in q.products | filter:{tag:'starcraft 2 zerg'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagStarcraft2BuildOrder">
+
+            <div ng-repeat="product in q.products | filter:{tag:'starcraft 2 build order'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+        <div class="tagStarcraft2Campaign">
+
+            <div ng-repeat="product in q.products | filter:{tag:'starcraft 2 campaign'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagStarcraft2Esports">
+
+            <div ng-repeat="product in q.products | filter:{tag:'starcraft 2 esports'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagStarcraft2CustomGame">
+
+            <div ng-repeat="product in q.products | filter:{tag:'starcraft 2 custom game'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+
+
+        <div class="tagDiablo3">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Class">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 class'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3SkillBuild">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 skill build'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Follower">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 follower'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Crafting">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 crafting'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Campaign">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 campaign'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Lore">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 lore'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Items">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 items'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Adventure">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 adventure'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Console">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 console'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Patch">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 patch'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+        <div class="tagDiablo3Hardcore">
+
+            <div ng-repeat="product in q.products | filter:{tag:'diablo 3 hardcore'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+        </div>
+ 
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="tagWow">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+        <div class="tagWowHorde">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow horde'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowAlliance">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow alliance'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowRaids">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow raids'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowProfessions">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow professions'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowFarming">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow farming'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowQuest">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow quest'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowAchievement">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow achievement'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowGear">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow gear'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowTransmorg">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow transmorg'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        
+
+        <div class="tagWowPvp">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow pvp'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowRoles">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow roles'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowGarrison">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow garrison'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowLore">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow Lore'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+        <div class="tagWowRp">
+
+            <div ng-repeat="product in q.products | filter:{tag:'wow rp'} |orderBy:'-votes'">
+              
+              <tag-questions></tag-questions>
+
+          </div>
+        </div>
+
+
+
+</div>
+      </div>
+</div>
+
+      <search-questions></search-questions>
+
+    
+</body>
+
+<script type='text/javascript'>/*
+// For simplicity, we're using jQuery for some things
+//   However, the library has no jQuery dependency
+$(function(){
+// Initialize library
+SE.init({ 
+    // Parameters obtained by registering an app, these are specific to the SE
+    //   documentation site
+    clientId: 1, 
+    key: 'U4DMV*8nvpm3EOpvf69Rxw((', 
+    // Used for cross domain communication, it will be validated
+    channelUrl: 'https://api.stackexchange.com/docs/proxy',
+    // Called when all initialization is finished
+    complete: function(data) { 
+        $('#login-button')
+            .removeAttr('disabled')
+            .text('Run Example With Version '+data.version); 
+    }
+});
+
+// Attach click handler to login button
+$('#login-button').click(function() {
+
+    // Make the authentication call, note that being in an onclick handler
+    //   is important; most browsers will hide windows opened without a
+    //   'click blessing'
+    SE.authenticate({
+        success: function(data) { 
+            alert(
+                'User Authorized with account id = ' + 
+                data.networkUsers[0].account_id + ', got access token = ' + 
+                data.accessToken
+            ); 
+        },
+        error: function(data) { 
+            alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
+        },
+        networkUsers: true
+    });
+});
+});*/
+</script>
+</html>
