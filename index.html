@@ -112,10 +112,14 @@
               {{product.askedOn | date}} <div class="pull-right">Tags: {{product.tag}}</div>
           </div>
              <div class="panel-body">
-              <em class="pull-left">Answers: {{product.answers.length}} </em>
+
+              <div class="pull-left"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star">Favorite </span></button></div>
               
               
-              <em class="pull-right">Votes: {{product.votes}}</em>
+              
+
+              
+              <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <span class="glyphicon glyphicon-chevron-up"></span></em>
                     <div class="answer">
                       <ul ><br><br>
                       
@@ -124,7 +128,9 @@
                               <li ng-repeat="answer in product.answers">
 
                                 <blockquote>
-                                  <strong>{{answer.upVotes}} Up Votes</strong>
+                                  <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
+                                  <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                                  </button></div>
                                   {{answer.body}}
                                   <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
                                 </blockquote>
@@ -146,9 +152,7 @@
                               <fieldset class="form-group">
                                 <textarea ng-model="answers.answer.body" class="form-control" placeholder="Write an Answer" title="Answer"></textarea>
                               </fieldset>
-                              <fieldset class="form-group">
-                                <input ng-model="answers.answer.author" type="email" class="form-control" placeholder="jimmyDean@sausage.com" title="Email" />
-                              </fieldset>
+                             
                               <fieldset class="form-group">
                                 <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
                               </fieldset>
@@ -208,15 +212,15 @@ $(function(){
 SE.init({ 
     // Parameters obtained by registering an app, these are specific to the SE
     //   documentation site
-    clientId: 1, 
+    clientId: 5345, 
     key: 'C3XsC1VXoWOuirD0IlisuQ((', 
     // Used for cross domain communication, it will be validated
-    channelUrl: 'http://127.0.0.1/bliz/',
+    channelUrl: 'http://davideighmey.github.io/',
     // Called when all initialization is finished
     complete: function(data) { 
         $('#login-button')
             .removeAttr('disabled')
-            .text('Run Example With Version '+data.version); 
+            .text('login '+data.version); 
     }
 });
 
@@ -232,7 +236,8 @@ $('#login-button').click(function() {
                 'User Authorized with account id = ' + 
                 data.networkUsers[0].account_id + ', got access token = ' + 
                 data.accessToken
-            ); 
+            );
+            login=true; 
         },
         error: function(data) { 
             alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 

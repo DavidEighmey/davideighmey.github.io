@@ -1,3 +1,4 @@
+
 $(window).load(function(){
         $('nav-bar, #search').keyup(function(){
           console.log("here2222");
