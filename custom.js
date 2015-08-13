@@ -822,7 +822,7 @@ $('#wowGarrisonButton').click(function(){
     $(".tagWowAchievement").hide(); 
     $(".tagWowGear").hide();
     $(".tagWowTransmorg").hide();
-    $(".tagWowPvp").show();
+    $(".tagWowPvp").hide();
     $(".tagWowRoles").hide();
     $(".tagWowGarrison").show();
     $(".tagWowLore").hide();
