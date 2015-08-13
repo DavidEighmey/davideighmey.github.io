@@ -33,23 +33,21 @@
 
 	<div class="col-md-12">
 
-    <div class="well recent" >
+    <div class="well recent" id="profileStuff" >
       <h2>Profile
         <button type="button"id='login-button' class="btn btn-primary pull-right">Log In</button>
+        <button type="button"id='login-out' class="btn btn-primary pull-right">Sign Out</button>
 
 		</h2>
 
-            <div class="well">
-        
+            <div class="well" >
+            <h3><div id="SignIn"></div></h3>
             <!-- answers -->
 
               <button type="button" id="answerButton" class="btn btn-primary pull-right">View Saved Answers</button>
 
-              <button type="button" id="answerButton" class="btn btn-primary pull-right">See Answer</button>
-
-              
               <h3><div id="profileAnswer">
-              </div></h3>
+              
               <!-- badges -->
 
               <br><br><br>
@@ -71,7 +69,7 @@
 
     </div>
 
-     <button type="button"id='login-out' class="btn btn-primary pull-right">Sign Out</button>
+     
     </div>
 
 
@@ -125,6 +123,8 @@ $('#login-button').click(function() {
            access = data.accessToken;
            console.log(id);
            console.log(access);
+
+           document.getElementById("SignIn").innerHTML += "Signed in successful";
         },
         error: function(data) { 
 
@@ -184,6 +184,18 @@ $('#badgesButton').click(function() {
             }
         },
         error: function () { },
+    });
+  });
+  $('#login-out').click(function() {
+
+
+    var id = null;
+    var access = null;
+    document.getElementById("SignIn").innerHTML += "Signed out";
+    document.getElementById("profileAnswer").innerHTML += " ";
+    document.getElementById("profileBadges").innerHTML += " ";
+    document.getElementById("profileFavorite").innerHTML = " ";
+            
     });
   });
 });

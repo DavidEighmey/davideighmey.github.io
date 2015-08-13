@@ -1,12 +1,14 @@
 //nav bac search to clear page
 $(window).load(function(){
         $('nav-bar, #search').keyup(function(){
-          console.log("here2222");
             $(".jumbotron").hide();
             $(".col-md-8").hide();
             $(".col-md-4").hide();
             $("#questionBackground").hide();
+            $("#userHeader").hide();
             $(".question-tabs").hide();
+            $("questionHeader").hide();
+            $("profileStuff").hide();
             $(".tab-content").hide();
             $(".row").hide();
             $(".badges").hide();
