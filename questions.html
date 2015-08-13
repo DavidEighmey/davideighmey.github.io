@@ -29,232 +29,190 @@
 	<nav-bar></nav-bar>
 
 
-            <!-- question header -->
-
+      <!-- question header -->
       <div class="well" id="questionHeader">
-       <h1>Questions</h1>
-     </div>
+        <h1>Questions</h1>
+      </div>
       
     <!-- tabs for different ways to sort -->
-<div class="well question-tabs" id="questionBackground">
-  <div class="question-tabs">
- <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#new"><h3>Newest</h3></a></li>
-    <li><a data-toggle="tab" href="#menu1"><h3>Votes</h3></a></li>
-    <li><a data-toggle="tab" href="#menu2"><h3>Answered</h3></a></li>
-
-  </ul>
+  <div class="well question-tabs" id="questionBackground">
+    <div class="question-tabs">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#new"><h3>Newest</h3></a></li>
+        <li><a data-toggle="tab" href="#menu1"><h3>Votes</h3></a></li>
+        <li><a data-toggle="tab" href="#menu2"><h3>Answered</h3></a></li>
+      </ul>
     </div>
-  <div class="tab-content">
-      <!-- newest first tab -->
 
-  <div id="new" class="tab-pane fade in active">
-
-
+    <div class="tab-content">
+      
+    <!-- newest first tab -->
+      <div id="new" class="tab-pane fade in active">
           <div ng-controller="StoreController as q" >
-
             <div ng-repeat="product in q.products | orderBy:'-askedOn'">
-              
               <div class="panel panel-default">
 
-            <div class="panel-heading">
+                <div class="panel-heading">
 
-              <h3 class="panel-title">{{product.question}}<div class="pull-right"> Asked By: {{product.askedBy}}</div></h3>
-              {{product.askedOn | date}} <div class="pull-right">Tags: {{product.tag}}</div>
-          </div>
-             <div class="panel-body">
-              
-              <div class="pull-left"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star">Favorite </span></button></div>
-              
-              
-              
-
-              
-              <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button></em>
+                  <h3 class="panel-title">{{product.question}}<div class="pull-right"> Asked By: {{product.askedBy}}</div></h3>
+                  {{product.askedOn | date}} <div class="pull-right">Tags: {{product.tag}}</div>
+                </div>
+                <div class="panel-body">
+                <div class="pull-left"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star">Favorite </span></button></div>
+ 
+                <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button></em>
                     <div class="answer">
-                      <ul ><br><br>
+                      <ul><br><br>                                                                        
+                          <h4> Answers </h4>
+                          <li ng-repeat="answer in product.answers">
+
+                          <blockquote>
+                            <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
+                            <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                            </button></div>
+                            {{answer.body}}
+                            <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
+                          </blockquote>
+                          </li>
+                      </ul>
+
+                      <!--  Answer Form -->
+                      <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
                       
-                                                            
-                              <h4> Answers </h4>
-                              <li ng-repeat="answer in product.answers">
-
-                                <blockquote>
-                                  <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
-                                  <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                  </button></div>
-                                  {{answer.body}}
-                                  <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
-                                </blockquote>
-                              </li>
-                            </ul>
-
-                            <!--  Answer Form -->
-                            <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
-                              <!--  Live Preview -->
-                              <blockquote ng-show="answers.answer.body">
+                      <!--  Live Preview -->
+                      <blockquote ng-show="answers.answer.body">
                                 
-                                {{answers.answer.body}}
-                                <cite class="clearfix">—{{answers.answer.author}}</cite>
-                              </blockquote>
+                        {{answers.answer.body}}
+                        
+                      </blockquote>
 
-                              <!--  Answer Form -->
-                              <h4>Submit an Answer</h4>
+                      <!--  Answer Form -->
+                      <h4>Submit an Answer</h4>
                               
-                              <fieldset class="form-group">
-                                <textarea ng-model="answers.answer.body" class="form-control" placeholder="Write an Answer" title="Answer"></textarea>
-                              </fieldset>
+                        <fieldset class="form-group">
+                          <textarea ng-model="answers.answer.body" class="form-control" placeholder="Write an Answer" title="Answer"></textarea>
+                        </fieldset>
                              
-                              <fieldset class="form-group">
-                                <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
-                              </fieldset>
-                          </form>    
+                        <fieldset class="form-group">
+                          <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
+                        </fieldset>
+                      </form>    
                       </div>
-
-          </div>
-        </div>
-        
-      </div>
-  </div>
-</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
-      <!-- by up Vote -->
+  <!-- by up Vote -->
  <div id="menu1" class="tab-pane fade">
-    
-
-
-
-  <div ng-controller="StoreController as q" >
-
-            <div ng-repeat="product in q.products | orderBy:'-votes'">
-              
-              <div class="panel panel-default">
-
+    <div ng-controller="StoreController as q" >
+        <div ng-repeat="product in q.products | orderBy:'-votes'">
+          <div class="panel panel-default">
             <div class="panel-heading">
-
               <h3 class="panel-title">{{product.question}}<div class="pull-right"> Asked By: {{product.askedBy}}</div></h3>
               {{product.askedOn | date}} <div class="pull-right">Tags: {{product.tag}}</div>
-          </div>
-             <div class="panel-body">
-              
+            </div>
+            <div class="panel-body">
               <div class="pull-left"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star">Favorite </span></button></div>
-              
-              
-              
 
-              
               <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button></em>
-                    <div class="answer">
-                      <ul ><br><br>
-                      
-                                                            
-                              <h4> Answers </h4>
-                              <li ng-repeat="answer in product.answers">
+              <div class="answer">
+                <ul><br><br>
+                                                                
+                  <h4> Answers </h4>
+                    <li ng-repeat="answer in product.answers">
 
-                                <blockquote>
-                                  <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
-                                  <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                  </button></div>
-                                  {{answer.body}}
-                                  <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
-                                </blockquote>
-                              </li>
-                            </ul>
+                      <blockquote>
+                        <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
+                        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button></div>
+                        {{answer.body}}
+                        <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
+                      </blockquote>
+                    </li>
+                </ul>
 
-                            <!--  Answer Form -->
-                            <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
-                              <!--  Live Preview -->
-                              <blockquote ng-show="answers.answer.body">
-                                
-                                {{answers.answer.body}}
-                                <cite class="clearfix">—{{answers.answer.author}}</cite>
-                              </blockquote>
+                  <!--  Answer Form -->
+                  <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
+                  <!--  Live Preview -->
+                  <blockquote ng-show="answers.answer.body">
+                    {{answers.answer.body}}
+                    
+                  </blockquote>
 
-                              <!--  Answer Form -->
-                              <h4>Submit an Answer</h4>
+                  <!--  Answer Form -->
+                  <h4>Submit an Answer</h4>
                               
-                              <fieldset class="form-group">
-                                <textarea ng-model="answers.answer.body" class="form-control" placeholder="Write an Answer" title="Answer"></textarea>
-                              </fieldset>
+                  <fieldset class="form-group">
+                    <textarea ng-model="answers.answer.body" class="form-control" placeholder="Write an Answer" title="Answer"></textarea>
+                  </fieldset>
                              
-                              <fieldset class="form-group">
-                                <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
-                              </fieldset>
-                          </form>    
-                      </div>
-
+                    <fieldset class="form-group">
+                      <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
+                    </fieldset>
+                  </form>    
+                </div>
+              </div>
             </div>
           </div>
-      </div>
-  </div>
-
-
-
-  </div>
+        </div>
+    </div>
 
   <!-- by how many answers -->
-
   <div id="menu2" class="tab-pane fade">
-    
-
     <div ng-controller="StoreController as q" >
+      <div ng-repeat="product in q.products | orderBy:'-answers.length'">
+          
+        <div class="panel panel-default">
 
-            <div ng-repeat="product in q.products | orderBy:'-answers.length'">
-              
-              <div class="panel panel-default">
+          <div class="panel-heading">
 
-            <div class="panel-heading">
-
-              <h3 class="panel-title">{{product.question}}<div class="pull-right"> Asked By: {{product.askedBy}}</div></h3>
+            <h3 class="panel-title">{{product.question}}<div class="pull-right"> Asked By: {{product.askedBy}}</div></h3>
               {{product.askedOn | date}} <div class="pull-right">Tags: {{product.tag}}</div>
           </div>
-             <div class="panel-body">
+          <div class="panel-body">
               
-              <div class="pull-left"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star">Favorite </span></button></div>
-              
-              
-              
+            <div class="pull-left"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star">Favorite </span></button></div>
 
-              
               <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button></em>
-                    <div class="answer">
-                      <ul ><br><br>
-                      
+
+              <div class="answer">
+                <ul><br><br>
                                                             
-                              <h4> Answers </h4>
-                              <li ng-repeat="answer in product.answers">
+                    <h4> Answers </h4>
+                      <li ng-repeat="answer in product.answers">
 
-                                <blockquote>
-                                  <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
-                                  <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                  </button></div>
+                        <blockquote>
+                          <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
+                          <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                            </button></div>
                                   {{answer.body}}
-                                  <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
-                                </blockquote>
-                              </li>
-                            </ul>
+                            <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
+                        </blockquote>
+                      </li>
+                  </ul>
 
-                            <!--  Answer Form -->
-                            <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
-                              <!--  Live Preview -->
-                              <blockquote ng-show="answers.answer.body">
+                  <!--  Answer Form -->
+                  <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
+                  <!--  Live Preview -->
+                    <blockquote ng-show="answers.answer.body">
                                 
-                                {{answers.answer.body}}
-                                <cite class="clearfix">—{{answers.answer.author}}</cite>
-                              </blockquote>
+                      {{answers.answer.body}}
+                    </blockquote>
 
-                              <!--  Answer Form -->
-                              <h4>Submit an Answer</h4>
+                    <!--  Answer Form -->
+                    <h4>Submit an Answer</h4>
                               
-                              <fieldset class="form-group">
-                                <textarea ng-model="answers.answer.body" class="form-control" placeholder="Write an Answer" title="Answer"></textarea>
-                              </fieldset>
+                      <fieldset class="form-group">
+                        <textarea ng-model="answers.answer.body" class="form-control" placeholder="Write an Answer" title="Answer"></textarea>
+                      </fieldset>
                              
-                              <fieldset class="form-group">
-                                <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
-                              </fieldset>
-                          </form>    
-                      </div>
+                      <fieldset class="form-group">
+                        <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
+                      </fieldset>
+                    </form>    
+                </div>
               </div>
             </div>
           </div>
@@ -264,7 +222,7 @@
   </div>
 
     
-    <search-questions></search-questions>
+  <search-questions></search-questions>
 
 </body>
 </html>
