@@ -68,6 +68,10 @@ body {
 #tagsButtonFont{
 	color: #000000;
 }
+.panel-heading{
+	color:#FFFFFF;
+	background: #1678c3;
+}
 .btn.btn-default.individualButtons{
 	color:#FFFFFF;
 	background: #1678c3;

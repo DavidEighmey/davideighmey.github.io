@@ -37,7 +37,7 @@
     });
 
     app.controller("ReviewController", function(){
-      console.log("?so");
+      
     this.answer = {};
     //add a review
     this.addAnswer = function(product){
@@ -75,7 +75,7 @@
         }
       ]
     }, {
-      question: "Who is your favorite boss in adventure mode",
+      question: "Who is your favorite boss in adventure mode?",
       votes: 20,
       askedBy: "Thrall",
       askedOn: 1439395341297,
@@ -109,7 +109,7 @@
       ]
     },
     {
-      question: "what is the best deck in the arena?",
+      question: "What is the best deck in the arena?",
       votes: 50,
       askedBy: "Jaina",
       askedOn: 1439395341297,
@@ -139,7 +139,7 @@
       ]
     },
 {
-      question: "What is the biggest event for hearthstone in Esports?",
+      question: "What is the biggest event for hearthstone in eSports?",
       votes: 50,
       askedBy: "Jaina",
       askedOn: 1439395341297,
@@ -160,7 +160,7 @@
     },
 
     {
-      question: "Who won the latest tournament and what deck did he use?",
+      question: "Who won the latest tournament in Hearthstone and what deck was used?",
       votes: 75,
       askedBy: "Diablo",
       askedOn: 1439395341297,
@@ -180,7 +180,7 @@
       ]
     },
     {
-      question: "I'm a new player and I want to learn how to play. What stream should I watch?",
+      question: "What video stream should I watch if I am a new player and want to learn to play?",
       votes: 50,
       askedBy: "Thrall",
       askedOn: 1439395341297,
@@ -247,7 +247,7 @@
     },
 
 {
-      question: "How will the different roles play in Overwatch",
+      question: "How will the different roles play in Overwatch?",
       votes: 150,
       askedBy: "Medivh",
       askedOn: 1439395341297,
@@ -273,7 +273,7 @@
     },
 
 {
-      question: "What does a support class do in Overwatch",
+      question: "What is a support class and what do they do in Overwatch?",
       votes: 250,
       askedBy: "Uther",
       askedOn: 1439395341297,
@@ -316,7 +316,7 @@
 
 
 {
-      question: "When will over watch be released?",
+      question: "When will Overwatch be released?",
       votes: 40,
       askedBy: "DeathWing",
       askedOn: 1439395341297,
@@ -353,7 +353,7 @@
     },
 
      {
-      question: "who is the best DPS in Heroes of the Storm?",
+      question: "Which character has the best DPS in Heroes of the Storm?",
       votes: 25,
       askedBy: "Jaina",
       askedOn: 1439395341297,
@@ -379,7 +379,7 @@
     },
 
  {
-      question: "Who is the best Tank in Heroes of the Storm?",
+      question: "Which character is the tank in Heroes of the Storm?",
       votes: 2,
       askedBy: "Illidan",
       askedOn: 1439395341297,
@@ -420,7 +420,7 @@
     },
 
 {
-      question: "When is the next heroes of the storm tournament?",
+      question: "When is the next Heroes of the Storm tournament?",
       votes: 50,
       askedBy: "Diablo",
       askedOn: 1439395341297,
@@ -440,7 +440,7 @@
       ]
     },
 {
-      question: "Who won the last tournament??",
+      question: "Who won the last tournament?",
       votes: 55,
       askedBy: "Anduin Wrynn",
       askedOn: 1439395341297,
@@ -609,7 +609,7 @@
         }
       ]
     },{
-      question: "What is the biggest Esports event for SC2?",
+      question: "What is the biggest eSports event for SC2?",
       votes: 98,
       askedBy: "Tyreal",
       askedOn: 1439395341297,
@@ -630,7 +630,7 @@
     },
 
     {
-      question: "Who is the best SC2 player in Esports?",
+      question: "Who is the best SC2 player in eSports?",
       votes: 789,
       askedBy: "Maghda",
       askedOn: 1439395341297,
@@ -926,7 +926,7 @@
       ]
     },
     {
-      question: "As a barbarian, what abilities should I use??",
+      question: "As a barbarian, what abilities should I use?",
       votes: 67,
       askedBy: "Garrosh Helscream",
       askedOn: 1439395341297,
@@ -981,7 +981,7 @@
       ]
     },
     {
-      question: "What is the Best starting area for the horde?",
+      question: "What is the best starting area for the horde?",
       votes: 25,
       askedBy: "Li Li",
       askedOn: 1439395341297,
@@ -1186,7 +1186,7 @@
       ]
     },
      {
-      question: "Has anyone ever gotten all the achievements in wow?",
+      question: "Has anyone ever gotten all the achievements in WOW?",
       votes: 23,
       askedBy: "DeathWing",
       askedOn: 1439395341297,
@@ -1201,7 +1201,7 @@
       ]
     },
          {
-      question: "What is the best gear for an enhancement Shaman??",
+      question: "What is the best gear for an enhancement Shaman?",
       votes: 89,
       askedBy: "Thrall",
       askedOn: 1439395341297,
@@ -1293,7 +1293,7 @@
     },
 
     {
-      question: "What gives you the best gear arenas or battlegrounds??",
+      question: "What gives you the best gear arenas or battlegrounds?",
       votes: 79,
       askedBy: "Diablo",
       askedOn: 1439395341297,
@@ -1423,10 +1423,10 @@
       ]
     },
     {
-      question: "What is your favorite WOW moment ?",
+      question: "What is your favorite WoW memeory?",
       votes: 400,
       askedBy: "Thrall",
-      askedOn: 1439395341297,
+      askedOn: 1439395340097,
       tag: "wow",
       answers: [
         {
@@ -1443,7 +1443,7 @@
       ]
     },
     {
-      question: "what is the difference between a regular server and a role playing server?",
+      question: "What is the difference between a regular server and a role playing server?",
       votes: 25,
       askedBy: "Li Li",
       askedOn: 1439395341297,
