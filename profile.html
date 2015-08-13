@@ -51,7 +51,7 @@
               <!-- badges -->
 
               <br><br><br>
-              <button type="button" id="badgesButton" class="btn btn-primary pull-rleftight">Badges Earned</button>
+              <button type="button" id="badgesButton" class="btn btn-primary pull-left">Badges Earned</button>
 
               
               <h3><div class="pull-right" id="profileBadges">
@@ -88,7 +88,7 @@ $(function(){
   var id = null;
   var access = null;
 // Initialize library
-SE.init({ 
+  SE.init({ 
     // Parameters obtained by registering an app, these are specific to the SE
     //   documentation site
 
@@ -103,16 +103,16 @@ SE.init({
             .removeAttr('disabled')
             .text('Sign In '); 
     }
-});
+  });
 
 // Attach click handler to login button
-$('#login-button').click(function() {
-  console.log("Log In Clicked");
+  $('#login-button').click(function() {
+    console.log("Log In Clicked");
     // Make the authentication call, note that being in an onclick handler
     //   is important; most browsers will hide windows opened without a
     //   'click blessing'
     
-    SE.authenticate({
+      SE.authenticate({
         success: function(data) { 
             alert(
                 'User Authorized with account id = ' + 
@@ -132,9 +132,9 @@ $('#login-button').click(function() {
         },
         networkUsers: true
     });
-});
-$('#answerButton').click(function() {
-  $.ajax({
+  });
+  $('#answerButton').click(function() {
+    $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/answers?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
             console.log(response);
@@ -150,12 +150,12 @@ $('#answerButton').click(function() {
            
         },
         error: function () { },
-    });
-});
-$('#badgesButton').click(function() {
+      });
+  });
+  $('#badgesButton').click(function() {
           console.log(id);
 
-  $.ajax({
+        $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/badges?order=desc&sort=rank&site=stackoverflow',
         success: function (response) {
                       console.log(response);
@@ -170,11 +170,11 @@ $('#badgesButton').click(function() {
             }
         },
         error: function () { },
+        });
     });
-});
-  $('#favoriteButton').click(function() {
-    console.log(id);
-    $.ajax({
+    $('#favoriteButton').click(function() {
+      console.log(id);
+      $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
           console.log(response);
