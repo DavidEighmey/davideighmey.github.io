@@ -157,16 +157,16 @@ $(function(){
         $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/badges?order=desc&sort=rank&site=stackoverflow',
         success: function (response) {
-                      console.log(response);
+            console.log(response);
 
             console.log(response);
-             if (response.has_more == false){
-              document.getElementById("profileBadges").innerHTML += "Badges: 0 <br>";
-            } else {
+             //if (response.has_more == false){
+             // document.getElementById("profileBadges").innerHTML += "Badges: 0 <br>";
+            //} else {
               for (var i in response.items){
-                document.getElementById("profileBadges").innerHTML += "Badges: <a href=" + i.owner.link+ ">" + i.badge_id +"</a><br>"
+                document.getElementById("profileBadges").innerHTML += "Badges: <a href=" + i.owner.link+ ">" + i.name  + i.rank + i.badge_id +"</a><br>"
               }
-            }
+            //}
         },
         error: function () { },
         });
