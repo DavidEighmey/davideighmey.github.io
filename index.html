@@ -30,11 +30,12 @@
 	<!-- nav bar -->
 	<nav-bar></nav-bar>
 
+  <!-- carousel -->
+
   <div class='jumbotron'>
     
       <h1>Welcome to Blizzard Universe Exchange!</h1>  
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -44,7 +45,7 @@
         <li data-target="#carousel-example-generic" data-slide-to="5"></li>
       </ol>
 
-  <!-- Wrapper for slides -->
+          <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
               <a href='http://us.battle.net/wow/en/' target="_blank"><img src="img/wowLegion.jpg" alt="Wow Legion"></a>
@@ -84,7 +85,7 @@
             </div>
           </div>
         </div>
-  <!-- Controls -->
+        <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -94,17 +95,14 @@
           <span class="sr-only">Next</span>
         </a>
         </div>
-      
-        
-
       </div>
     </div>
 
-    
+    <!-- for the search bar -->
     <div class="result"></div>
 
 
-
+    <!-- Recent questions only 5 bar -->
     <div class="col-md-8">
       <div class="well recent" ><h2>Recent Questions</h2></div>
         <div ng-controller="StoreController as q" >
@@ -113,39 +111,34 @@
               
               <div class="panel panel-default">
 
-            <div class="panel-heading">
+                <div class="panel-heading">
 
-              <h3 class="panel-title">{{product.question}}<div class="pull-right"> Asked By: {{product.askedBy}} </div></h3>
+                <h3 class="panel-title">{{product.question}}<div class="pull-right"> Asked By: {{product.askedBy}} </div></h3>
               {{product.askedOn | date}} <div class="pull-right">Tags: {{product.tag}}</div>
-          </div>
+              </div>
              <div class="panel-body">
 
               <div class="pull-left"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star">Favorite </span></button></div>
-              
-              
-              
-
-              
-              <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button></em>
+ 
+                <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button></em>
                     <div class="answer">
-                      <ul ><br><br>
+                      <ul><br><br>
                       
-                                                            
-                              <h4> Answers </h4>
-                              <li ng-repeat="answer in product.answers">
-
-                                <blockquote>
-                                  <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
-                                  <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                  </button></div>
-                                  {{answer.body}}
-                                  <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
+                                                    
+                          <h4> Answers </h4>
+                          <li ng-repeat="answer in product.answers">
+                            <blockquote>
+                              <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
+                              <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                              </button></div>
+                              {{answer.body}}
+                              <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
                                 </blockquote>
-                              </li>
-                            </ul>
+                            </li>
+                       </ul>
 
                             <!--  Answer Form -->
-                            <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
+                             <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
                               <!--  Live Preview -->
                               <blockquote ng-show="answers.answer.body">
                                 
@@ -181,18 +174,17 @@
           <div ng-controller="StoreController as q" >
 
             <div ng-repeat="user in q.usrs | orderBy:'-reputation' | limitTo:5">
-              
-                  
+     
               <div class="panel panel-default">
               
-            <div class="panel-heading">
+                  <div class="panel-heading">
 
-              <h3 class="panel-title center-block">{{user.name}}</h3>
-          </div>
-             <div class="panel-body">
-              <div class="pull-left"><img ng-src="{{user.image}}" height="100" width="100" />  </div>
-              <h5 class="pull-right">Reputation: {{user.reputation}}</h5>
-            </div>
+                    <h3 class="panel-title center-block">{{user.name}}</h3>
+                  </div>
+                 <div class="panel-body">
+                  <div class="pull-left"><img ng-src="{{user.image}}" height="100" width="100" />  </div>
+                  <h5 class="pull-right">Reputation: {{user.reputation}}</h5>
+                </div>
           </div>
         </div>
       </div>

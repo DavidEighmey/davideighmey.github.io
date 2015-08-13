@@ -1,4 +1,4 @@
-
+//nav bac search to clear page
 $(window).load(function(){
         $('nav-bar, #search').keyup(function(){
           console.log("here2222");
@@ -17,6 +17,7 @@ $(window).load(function(){
         });
       });
 
+//slide toggle all the answers
 $(document).ready(function() {
   $('search-questions, .searchAnswer, .tagWow, .tagHearthStone, .tagHearthStoneDeck, .tagHearthStoneArena, .tagHearthStoneAdventure, .tagHearthStoneEsports, .tagHearthStoneStream, .tagOverwatch, .tagOverwatchHeroes, .tagOverwatchRoles, .tagOverwatchCompetitive, .tagOverwatchMaps, .tagHeroesoftheStorm, .tagHeroesoftheStormRoles, .tagHeroesoftheStormUniverse, .tagHeroesoftheStormTournament, .tagHeroesoftheStormSkins, .tagHeroesoftheStormMap, .tagStarcraft2, .tagStarcraft2Terrian, .tagStarcraft2Zerg, .tagStarcraft2BuildOrder, .tagStarcraft2Campaign, .tagStarcraft2Esports, .tagStarcraft2CustomGame, .tagDiablo3, .tagDiablo3Class, .tagDiablo3SkillBuild, .tagDiablo3Follower, .tagDiablo3Crafting,.tagDiablo3Campaign, .tagDiablo3Lore, .tagDiablo3Items, .tagDiablo3Adventure, .tagDiablo3Console, .tagDiablo3Patch, .tagDiablo3Hardcore, .tagWowHorde, .tagWowAlliance, .tagWowRaids, .tagWowProfessions, .tagWowFarming, .tagWowQuest, .tagWowAchievement, .tagWowGear, .tagWowTransmorg, .tagWowPvp, .tagWowRoles, .tagWowGarrison, .tagWowLore, .tagWowRp, .panel-heading').click(function(){
     console.log("clicked1");
@@ -26,6 +27,8 @@ $(document).ready(function() {
  
 
 
+
+//for tags each button hides all other tags
   $('#wowButton').click(function(){
     console.log("wowGen")
 
@@ -3224,8 +3227,4 @@ $('#owMapsButton').click(function(){
     $(".tagWowLore").hide();
     $(".tagWowRp").hide();
  });
-
-
 });
-
-
