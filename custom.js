@@ -36,7 +36,7 @@ $(document).ready(function() {
 
     $(".tagHearthStone").hide();
     $(".tagHearthStoneDeck").hide();
-        $(".tagHearthStoneArena").hide();
+    $(".tagHearthStoneArena").hide();
 
     $(".tagHearthStoneAdventure").hide();
     $(".tagHearthStoneEsports").hide();
