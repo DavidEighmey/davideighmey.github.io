@@ -101,7 +101,7 @@ SE.init({
         console.log(data);
         $('#login-button')
             .removeAttr('disabled')
-            .text('Login '); 
+            .text('Sign In '); 
     }
 });
 
@@ -157,6 +157,8 @@ $('#badgesButton').click(function() {
   $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/badges?order=desc&sort=rank&site=stackoverflow',
         success: function (response) {
+                      console.log(response);
+
             console.log(response);
              if (response.has_more == false){
               document.getElementById("profileBadges").innerHTML += "Badges: 0 <br>";
