@@ -1,10 +1,8 @@
 (function() {
   var app = angular.module('blizz', [ ]);
 
-    //controllers to play with the data!
+    //controllers to show with the data!
     app.controller('StoreController', function() {
-      
-   	  console.log("here");
       this.products = questions;
       this.usrs = us;
       this.tagClick = function(tag){
@@ -15,13 +13,13 @@
 
     app.controller("ReviewController", function(){
       
-    this.answer = {};
-    this.addAnswer = function(product){
-      this.answer.createdOn = Date.now();
-      product.answers.push(this.answer);
       this.answer = {};
-    };
-  });
+      this.addAnswer = function(product){
+        this.answer.createdOn = Date.now();
+        product.answers.push(this.answer);
+        this.answer = {};
+      };
+    });
 
 
     //directives!    
@@ -45,13 +43,6 @@
         templateUrl: "search-questions.html"
       };
     });
-
-
-    
-
-
-
-
 
     //mock data!
    var questions= [
@@ -1457,8 +1448,9 @@
         }
       ]
     }
-];
+  ];
 
+//mock users
   var us =[
     {
       name: "Uther",

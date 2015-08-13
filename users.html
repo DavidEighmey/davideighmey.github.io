@@ -28,96 +28,43 @@
 	<!-- nav bar -->
 	<nav-bar></nav-bar>
 
+            <!-- user header -->
 
 <div class="well" id="userHeader">
        <h1>Top Users</h1>
-
-
-     
      </div>
+
+                 <!-- Users -->
+
      <div class="users">
-<div class="well" id="userBackground" >
+        <div class="well" id="userBackground" >
 
 
-<div ng-controller="StoreController as q" >
+            <div ng-controller="StoreController as q" >
 
-            <div ng-repeat="user in q.usrs | orderBy:'-reputation'">
+              <div ng-repeat="user in q.usrs | orderBy:'-reputation'">
               
-              <div class="panel panel-default">
+                <div class="panel panel-default">
 
-            <div class="panel-heading">
+                    <div class="panel-heading">
 
-              <h3 class="panel-title center-block">{{user.name}}</h3>
+                    <h3 class="panel-title center-block">{{user.name}}</h3>
+                    </div>
+                   <div class="panel-body">
+                    <div class="pull-left"><img ng-src="{{user.image}}" height="100" width="100" />  </div>
+                    <h3 class="pull-right">Reputation: {{user.reputation}}</h3>
+                    </div>
+              </div>
+            </div>
           </div>
-             <div class="panel-body">
-              <div class="pull-left"><img ng-src="{{user.image}}" height="100" width="100" />  </div>
-              <h3 class="pull-right">Reputation: {{user.reputation}}</h3>
-            
-              
-</div>
-</div>
-</div>
-</div>
 
 
-</div>
-</div>
-
-
-
-
-
+        </div>
+  </div>
 
 
 <search-questions></search-questions>
-
-
-
-
-    
+   
     
 </body>
-
-<script type='text/javascript'>
-// For simplicity, we're using jQuery for some things
-//   However, the library has no jQuery dependency
-$(function(){
-// Initialize library
-SE.init({ 
-    // Parameters obtained by registering an app, these are specific to the SE
-    //   documentation site
-    clientId: 1, 
-    key: 'U4DMV*8nvpm3EOpvf69Rxw((', 
-    // Used for cross domain communication, it will be validated
-    channelUrl: 'https://api.stackexchange.com/docs/proxy',
-    // Called when all initialization is finished
-    complete: function(data) { 
-        $('#login-button')
-            .removeAttr('disabled')
-            .text('Run Example With Version '+data.version); 
-    }
-});
-
-// Attach click handler to login button
-$('#login-button').click(function() {
-
-    // Make the authentication call, note that being in an onclick handler
-    //   is important; most browsers will hide windows opened without a
-    //   'click blessing'
-    SE.authenticate({
-        success: function(data) { 
-            alert(
-                'User Authorized with account id = ' + 
-                data.networkUsers[0].account_id + ', got access token = ' + 
-                data.accessToken
-            ); 
-        },
-        error: function(data) { 
-            alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
-        },
-        networkUsers: true
-    });
-});
-});
-</script>
 </html>
