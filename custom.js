@@ -7,8 +7,8 @@ $(window).load(function(){
             $("#questionBackground").hide();
             $("#userHeader").hide();
             $(".question-tabs").hide();
-            $("questionHeader").hide();
-            $("profileStuff").hide();
+            $("#questionHeader").hide();
+            $("#profileStuff").hide();
             $(".tab-content").hide();
             $(".row").hide();
             $(".badges").hide();
