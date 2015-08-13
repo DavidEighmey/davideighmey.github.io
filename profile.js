@@ -38,7 +38,7 @@ $(function(){
            console.log(id);
            console.log(access);
 
-           document.getElementById("SignIn").innerHTML += "Signed in successful";
+           document.getElementById("SignIn").innerHTML = "Signed in successful";
         },
         error: function(data) { 
 
