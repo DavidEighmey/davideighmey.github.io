@@ -41,12 +41,12 @@
 		</h2>
 
             <div class="well" >
-            <h3><div id="SignIn"></div></h3>
+            <h3><div class="pull-right" id="SignIn"></div></h3>
             <!-- answers -->
 
               <button type="button" id="answerButton" class="btn btn-primary pull-left">View Saved Answers</button>
 
-              <h3><div id="profileAnswer">
+              <h3><div class="pull-right" id="profileAnswer">
               
               <!-- badges -->
 
@@ -54,7 +54,7 @@
               <button type="button" id="badgesButton" class="btn btn-primary pull-rleftight">Badges Earned</button>
 
               
-              <h3><div id="profileBadges">
+              <h3><div class="pull-right" id="profileBadges">
               </div></h3>
 
                <!-- favorites -->
@@ -62,7 +62,7 @@
               <br><br><br>
               <button type="button" id="favoriteButton" class="btn btn-primary pull-left">View Favotites</button>
               
-              <h3><div id="profileFavorite">
+              <h3><div  class="pull-right"id="profileFavorite">
               </div></h3>
               <br><br><br>
           </div>
@@ -85,8 +85,8 @@ $(function(){
 
 
 
-  var id;
-  var access;
+  var id = null;
+  var access = null;
 // Initialize library
 SE.init({ 
     // Parameters obtained by registering an app, these are specific to the SE
@@ -153,6 +153,7 @@ $('#answerButton').click(function() {
     });
 });
 $('#badgesButton').click(function() {
+          console.log(id);
 
   $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/badges?order=desc&sort=rank&site=stackoverflow',
@@ -172,7 +173,7 @@ $('#badgesButton').click(function() {
     });
 });
   $('#favoriteButton').click(function() {
-
+    console.log(id);
     $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
