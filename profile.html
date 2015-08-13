@@ -38,21 +38,35 @@
 
 		</h2>
 
-            <div class="well">
+            <div class="well scroll">
 
           
 
                
         
-              <button type="button" id="profileButton" class="btn btn-primary pull-right">See Profile</button>
+              <button type="button" id="answerButton" class="btn btn-primary pull-right">See Answer</button>
 
               
-              <h3><div id="profile">
+              <h3><div id="profileAnswer">
+              </div></h3>
+              <br><br><br>
+              <button type="button" id="badgesButton" class="btn btn-primary pull-right">See Badges</button>
+
+              
+              <h3><div id="profileBadges">
+              </div></h3>
+              <br><br><br>
+              <button type="button" id="favoriteButton" class="btn btn-primary pull-right">See Favotites</button>
+
+              
+              <h3><div id="profileFavorite">
               </div></h3>
               <br><br><br>
           </div>
 
     </div>
+
+     <button type="button"id='login-out' class="btn btn-primary pull-right">Sign Out</button>
     </div>
 
 
@@ -114,8 +128,7 @@ $('#login-button').click(function() {
         networkUsers: true
     });
 });
-///2.2/users/{ids}/answers?order=desc&sort=activity&site=stackoverflow
-$('#profileButton').click(function() {
+$('#answerButton').click(function() {
   $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/answers?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
@@ -123,39 +136,45 @@ $('#profileButton').click(function() {
             console.log(response);
             
             if (response.has_more == false){
-              document.getElementById("profile").innerHTML +="Answers: 0 <br>";
+              document.getElementById("profileAnswer").innerHTML +="Answers: 0 <br>";
             } else {
               for (var i in response.items){
-                document.getElementById("profile").innerHTML += "Answer: <a href=" + i.link+ ">" + i.title +"</a><br>"
+                document.getElementById("profileAnswer").innerHTML += "Answer: <a href=" + i.link+ ">" + i.title +"</a><br>"
               }
             }
            
         },
         error: function () { },
     });
+});
+$('#badgesButton').click(function() {
+
   $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/badges?order=desc&sort=rank&site=stackoverflow',
         success: function (response) {
             console.log(response);
              if (response.has_more == false){
-              document.getElementById("profile").innerHTML += "Badges: 0 <br>";
+              document.getElementById("profileBadges").innerHTML += "Badges: 0 <br>";
             } else {
               for (var i in response.items){
-                document.getElementById("profile").innerHTML += "Badges: <a href=" + i.owner.link+ ">" + i.badge_id +"</a><br>"
+                document.getElementById("profileBadges").innerHTML += "Badges: <a href=" + i.owner.link+ ">" + i.badge_id +"</a><br>"
               }
             }
         },
         error: function () { },
     });
+});
+  $('#favoriteButton').click(function() {
+
     $.ajax({
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
           console.log(response);
            if (response.has_more == false){
-              document.getElementById("profile").innerHTML +="Favorites: 0 <br>";
+              document.getElementById("profileFavorite").innerHTML +="Favorites: 0 <br>";
             } else {
               for (var i in response.items){
-                document.getElementById("profile").innerHTML += "Favorites: <a href=" + i.link+ ">" + i.title +"</a><br>"
+                document.getElementById("profileFavorite").innerHTML += "Favorites: <a href=" + i.link+ ">" + i.title +"</a><br>"
               }
             }
         },
