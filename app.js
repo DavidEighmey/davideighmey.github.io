@@ -1475,11 +1475,11 @@
     },{
       name: "Medivh",
       reputation: 500,
-      image: "img/users/img.png"
+      image: "img/users/medivh.jpeg"
     },{
       name: "Arthas",
       reputation: 3000,
-      image: "img/users/medivh.jpeg"
+      image: "img/users/Arthas.jpg"
     },
     {
       name: "Gul'dan",
