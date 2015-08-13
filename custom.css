@@ -12,11 +12,11 @@ h2{
 }
 
 .topUser{
-	background: url("img/blizzbackground.png") ;
+	background: url("img/blizzbackground.png");
 }
 
 .scroll{
-	background: url("img/scroll.png") no-repeat center center;
+	background: url("img/scroll.png");
 }
 .textCenter{
 	text-align: center;
