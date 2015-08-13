@@ -7,7 +7,7 @@ $(window).load(function(){
             $("#questionBackground").hide();
             $("#userHeader").hide();
             $("#question-tabs").hide();
-            $("tagQuestions").hide();
+            $("#tagQuestions").hide();
             $("#questionHeader").hide();
             $("#profileStuff").hide();
             $(".tab-content").hide();
