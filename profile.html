@@ -64,7 +64,7 @@
               <br><br><br>
               
               
-              <h3><div  class="pull-left"id="profileFavorite">
+              <h3><div  class="pull-left" id="profileFavorite">
               </div></h3>
               <br><br>
               <h3><div class="pull-right" id="SignIn"></div></h3>
@@ -169,7 +169,7 @@ $(function(){
               for (var i in response.items){
                 document.getElementById("profileBadges").innerHTML += "Badges: <a href=" + i.owner.link+ ">" + i.name + " "  + i.rank + " " + i.badge_id +"</a><br>"
               }
-            //}
+            }
         },
         error: function () { },
         });
