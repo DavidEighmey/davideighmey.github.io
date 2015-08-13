@@ -24,9 +24,12 @@
                               <li ng-repeat="answer in product.answers">
 
                                 <blockquote>
-                                  <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" aria-label="Left Align" ng-click="">
-                                  <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                                  </button></div>
+                                   <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" >
+                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                                    </button></div>
+                                      <div class="pull-right"><button type="button" class="btn btn-default" >
+                                      <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                    </button></div>
                                   {{answer.body}}
                                   <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
                                 </blockquote>
