@@ -2,24 +2,14 @@ h1 {
 	text-align: center;
 	font-size: 60px;
 }
-h2{
-	color: #FFFFFF;
-	text-align: center;
-}
-h4{
-	text-align: center;
-}
-
-body {
-	background: url("img/blizzbackground.png") repeat-y;
-	background-attachment: fixed;
-
-	background-position: center; 
-}
 .jumbotron{
 	background: #000000 url('img/scroll.png') no-repeat center center;
 }
 
+h2{
+	color: #FFFFFF;
+	text-align: center;
+}
 
 .topUser{
 	background: url("img/blizzbackground.png") ;
@@ -31,7 +21,9 @@ body {
 .textCenter{
 	text-align: center;
 }
-
+h4{
+	text-align: center;
+}
 .recent{
 	background: url("img/blizzbackground.png");
 }
@@ -55,6 +47,14 @@ body {
 #userBackground{
 	background: url();
 
+}
+
+
+body {
+	background: url("img/blizzbackground.png") repeat-y;
+	background-attachment: fixed;
+
+	background-position: center; 
 }
 
 #tagQuestions{

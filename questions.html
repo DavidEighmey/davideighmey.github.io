@@ -28,13 +28,12 @@
 	<nav-bar></nav-bar>
 
 
-            <!-- question header -->
 
       <div class="well" id="questionHeader">
        <h1>Questions</h1>
      </div>
       
-    <!-- tabs for different ways to sort -->
+      
 <div class="well question-tabs" id="questionBackground">
   <div class="question-tabs">
  <ul class="nav nav-tabs">
@@ -45,8 +44,6 @@
   </ul>
     </div>
   <div class="tab-content">
-      <!-- newest first tab -->
-
   <div id="new" class="tab-pane fade in active">
 
 
@@ -109,21 +106,20 @@
                           </form>    
                       </div>
 
+            </div>
           </div>
-        </div>
         
-      </div>
-  </div>
+          </div>
+</div>
 </div>
 
 
-      <!-- by up Vote -->
  <div id="menu1" class="tab-pane fade">
     
 
 
 
-  <div ng-controller="StoreController as q" >
+<div ng-controller="StoreController as q" >
 
             <div ng-repeat="product in q.products | orderBy:'-votes'">
               
@@ -184,15 +180,13 @@
 
             </div>
           </div>
-      </div>
-  </div>
+        
+          </div>
+</div>
 
 
 
   </div>
-
-  <!-- by how many answers -->
-
   <div id="menu2" class="tab-pane fade">
     
 
