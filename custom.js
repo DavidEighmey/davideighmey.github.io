@@ -6,7 +6,7 @@ $(window).load(function(){
             $(".col-md-4").hide();
             $("#questionBackground").hide();
             $("#userHeader").hide();
-            $(".question-tabs").hide();
+            $("#question-tabs").hide();
             $("#questionHeader").hide();
             $("#profileStuff").hide();
             $(".tab-content").hide();
