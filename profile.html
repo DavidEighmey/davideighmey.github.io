@@ -43,25 +43,28 @@
             <div class="well" >
             <!-- answers -->
 
-              <button type="button" id="answerButton" class="btn btn-primary pull-left">View Saved Answers</button>
-
-              <h3><div class="pull-right" id="profileAnswer"></div>
+              <button type="button" id="answerButton" class="btn btn-primary pull-left">View Saved Answers</button> 
+              <button type="button" id="badgesButton" class="btn btn-primary pull-left">Badges Earned</button> 
+              <button type="button" id="favoriteButton" class="btn btn-primary pull-left">View Favotites</button>
+              <br>
+              <h3><div class="pull-left" id="profileAnswer"></div>
               
               <!-- badges -->
 
               <br><br><br>
-              <button type="button" id="badgesButton" class="btn btn-primary pull-left">Badges Earned</button>
+              
+
 
               
-              <h3><div class="pull-right" id="profileBadges">
+              <h3><div class="pull-left" id="profileBadges">
               </div></h3>
 
                <!-- favorites -->
 
               <br><br><br>
-              <button type="button" id="favoriteButton" class="btn btn-primary pull-left">View Favotites</button>
               
-              <h3><div  class="pull-right"id="profileFavorite">
+              
+              <h3><div  class="pull-left"id="profileFavorite">
               </div></h3>
               <br><br>
               <h3><div class="pull-right" id="SignIn"></div></h3>
@@ -160,11 +163,11 @@ $(function(){
             console.log(response);
 
             console.log(response);
-             //if (response.has_more == false){
-             // document.getElementById("profileBadges").innerHTML += "Badges: 0 <br>";
-            //} else {
+             if (response.items.length == 0){
+              document.getElementById("profileBadges").innerHTML += "Badges: 0 <br>";
+            } else {
               for (var i in response.items){
-                document.getElementById("profileBadges").innerHTML += "Badges: <a href=" + i.owner.link+ ">" + i.name  + i.rank + i.badge_id +"</a><br>"
+                document.getElementById("profileBadges").innerHTML += "Badges: <a href=" + i.owner.link+ ">" + i.name + " "  + i.rank + " " + i.badge_id +"</a><br>"
               }
             //}
         },
@@ -177,7 +180,7 @@ $(function(){
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
           console.log(response);
-           if (response.has_more == false){
+           if (response.items.length == false){
               document.getElementById("profileFavorite").innerHTML +="Favorites: 0 <br>";
             } else {
               for (var i in response.items){
