@@ -68,7 +68,7 @@ body {
 #tagsButtonFont{
 	color: #000000;
 }
-.panel.panel-default.panel-heading{
+.panel.panel-default.panel-heading.ng-binding{
 	color:#FFFFFF;
 	background: #1678c3;
 }
