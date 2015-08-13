@@ -46,7 +46,7 @@
 
               <button type="button" id="answerButton" class="btn btn-primary pull-left">View Saved Answers</button>
 
-              <h3><div class="pull-right" id="profileAnswer">
+              <h3><div class="pull-right" id="profileAnswer"></div>
               
               <!-- badges -->
 
@@ -81,12 +81,10 @@
 // For simplicity, we're using jQuery for some things
 //   However, the library has no jQuery dependency
 $(document).ready(function() {
-$(function(){
-
-
-
   var id = null;
   var access = null;
+$(function(){
+  
 // Initialize library
   SE.init({ 
     // Parameters obtained by registering an app, these are specific to the SE
