@@ -139,7 +139,7 @@ $(function(){
             console.log(response);
             console.log(response);
             
-            if (response.has_more == false){
+            if (response.items.length == 0){
               document.getElementById("profileAnswer").innerHTML +="Answers: 0 <br>";
             } else {
               for (var i in response.items){
