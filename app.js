@@ -1,20 +1,30 @@
 (function() {
   var app = angular.module('blizz', [ ]);
-   	console.log(app);
 
+    //controllers to play with the data!
     app.controller('StoreController', function() {
       
    	  console.log("here");
       this.products = questions;
       this.usrs = us;
       this.tagClick = function(tag){
-        console.log("clickedhere");
         this.query = tag;
       }
      
  	  });
 
-    
+    app.controller("ReviewController", function(){
+      
+    this.answer = {};
+    this.addAnswer = function(product){
+      this.answer.createdOn = Date.now();
+      product.answers.push(this.answer);
+      this.answer = {};
+    };
+  });
+
+
+    //directives!    
     app.directive("navBar", function() {
     return {
       restrict: 'E',
@@ -36,24 +46,14 @@
       };
     });
 
-    app.controller("ReviewController", function(){
-      
-    this.answer = {};
-    //add a review
-    this.addAnswer = function(product){
-      console.log("?so");
-      this.answer.createdOn = Date.now();
-      product.answers.push(this.answer);
-      this.answer = {};//make empty after added
-    };
-  });
+
+    
 
 
 
 
 
-  console.log(app);
-
+    //mock data!
    var questions= [
   {
       question: "What is the best deck in Hearthstone?",

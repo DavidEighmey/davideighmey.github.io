@@ -144,7 +144,7 @@
                               </li>
                             </ul>
 
-                            <!--  Review Form -->
+                            <!--  Answer Form -->
                             <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
                               <!--  Live Preview -->
                               <blockquote ng-show="answers.answer.body">
@@ -153,7 +153,7 @@
                                 <cite class="clearfix">—{{answers.answer.author}}</cite>
                               </blockquote>
 
-                              <!--  Review Form -->
+                              <!--  Answer Form -->
                               <h4>Submit an Answer</h4>
                               
                               <fieldset class="form-group">
@@ -163,25 +163,21 @@
                               <fieldset class="form-group">
                                 <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
                               </fieldset>
-                          </form>
-                          
-                      </div>
-
+                          </form>        
+               </div>
             </div>
           </div>
-        
-          </div>
-        </div>
-        </div>
+      </div>
+    </div>
+  </div>
 
 
-<div class="col-md-4">
+  <!-- Top Users -->
+
+  <div class="col-md-4">
     <div class="well topUser"><h2>Top Users</h2>  </div>
 
-
-    <div class="well topUserBackground" >
-
-
+      <div class="well topUserBackground" >
           <div ng-controller="StoreController as q" >
 
             <div ng-repeat="user in q.usrs | orderBy:'-reputation' | limitTo:5">
@@ -196,20 +192,14 @@
              <div class="panel-body">
               <div class="pull-left"><img ng-src="{{user.image}}" height="100" width="100" />  </div>
               <h5 class="pull-right">Reputation: {{user.reputation}}</h5>
-            
-              
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <search-questions></search-questions>
 
 </body>
-
-
 </html>
