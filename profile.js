@@ -109,28 +109,27 @@ $(function(){
             }
         },
         error: function () { },
+      });
+    });
+
+    $('#login-out').click(function() {
+      console.log(id);
+
+      if(id !== 0){
+
+        var id = 0;
+        var access = null;
+        document.getElementById("SignIn").innerHTML = "Signed out";
+        document.getElementById("profileAnswer").innerHTML = " ";
+        document.getElementById("profileBadges").innerHTML = " ";
+        document.getElementById("profileFavorite").innerHTML = " ";
+
+      } else {
+        document.getElementById("SignIn").innerHTML = "Please sign in first";
+        document.getElementById("profileAnswer").innerHTML = " ";
+        document.getElementById("profileBadges").innerHTML = " ";
+        document.getElementById("profileFavorite").innerHTML = " ";
+      }
     });
   });
-
-
-  $('#login-out').click(function() {
-    console.log(id);
-
-    if(id !== 0){
-
-      var id = null;
-      var access = null;
-      document.getElementById("SignIn").innerHTML = "Signed out";
-      document.getElementById("profileAnswer").innerHTML = " ";
-      document.getElementById("profileBadges").innerHTML = " ";
-      document.getElementById("profileFavorite").innerHTML = " ";
-
-    } else {
-      document.getElementById("SignIn").innerHTML = "Please sign in first";
-      document.getElementById("profileAnswer").innerHTML = " ";
-      document.getElementById("profileBadges").innerHTML = " ";
-      document.getElementById("profileFavorite").innerHTML = " ";
-    }
-  });
-});
 });
