@@ -4,7 +4,7 @@
 $(document).ready(function() {
  
 $(function(){
-  this.id = 0;
+  this.localID = 0;
   var access = null;
 // Initialize library
   SE.init({ 
@@ -113,7 +113,7 @@ $(function(){
     });
 
     $('#login-out').click(function() {
-      console.log(this.id);
+      console.log(this.localID);
 
       if(id !== 0){
 
