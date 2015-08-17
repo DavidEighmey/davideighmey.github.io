@@ -1,11 +1,11 @@
 // For simplicity, we're using jQuery for some things
 //   However, the library has no jQuery dependency
- var id = null;
-  var access = null;
+
 $(document).ready(function() {
  
 $(function(){
-  
+   var id = null;
+  var access = null;
 // Initialize library
   SE.init({ 
     // Parameters obtained by registering an app, these are specific to the SE
@@ -101,6 +101,7 @@ $(function(){
           console.log(response);
            if (response.items.length == false){
               document.getElementById("profileFavorite").innerHTML +="Favorites: 0 <br>";
+              console.log('api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow')
             } else {
               for (var i in response.items){
                 document.getElementById("profileFavorite").innerHTML += "Favorites: <a href=" + i.link+ ">" + i.title +"</a><br>"
