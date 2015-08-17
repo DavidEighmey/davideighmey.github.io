@@ -2,12 +2,15 @@
 //   However, the library has no jQuery dependency
 
 $(document).ready(function() {
+ 
+$(function(){
   var id = 0;
   var access = null;
+// Initialize library
   $('#login-out').click(function() {
       console.log(id);
 
-      if(id !== 0){
+      
 
         var id = 0;
         var access = null;
@@ -15,18 +18,7 @@ $(document).ready(function() {
         document.getElementById("profileAnswer").innerHTML = " ";
         document.getElementById("profileBadges").innerHTML = " ";
         document.getElementById("profileFavorite").innerHTML = " ";
-
-      } else {
-        document.getElementById("SignIn").innerHTML = "Please sign in first";
-        document.getElementById("profileAnswer").innerHTML = " ";
-        document.getElementById("profileBadges").innerHTML = " ";
-        document.getElementById("profileFavorite").innerHTML = " ";
-      }
     });
-$(function(){
-  
-// Initialize library
-  
   SE.init({ 
     // Parameters obtained by registering an app, these are specific to the SE
     //   documentation site
