@@ -1,8 +1,9 @@
 // For simplicity, we're using jQuery for some things
 //   However, the library has no jQuery dependency
-$(document).ready(function() {
-  var id = null;
+ var id = null;
   var access = null;
+$(document).ready(function() {
+ 
 $(function(){
   
 // Initialize library
@@ -112,7 +113,7 @@ $(function(){
 
 
   $('#login-out').click(function() {
-          console.log(id);
+    console.log(id);
 
     if(id != null){
 
