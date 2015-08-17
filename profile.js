@@ -112,6 +112,8 @@ $(function(){
 
 
   $('#login-out').click(function() {
+          console.log(id);
+
     if(id != null){
 
       var id = null;
