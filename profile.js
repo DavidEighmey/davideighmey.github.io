@@ -4,7 +4,7 @@
 $(document).ready(function() {
  
 $(function(){
-  var id = 0;
+  this.id = 0;
   var access = null;
 // Initialize library
   SE.init({ 
@@ -113,7 +113,7 @@ $(function(){
     });
 
     $('#login-out').click(function() {
-      console.log(id);
+      console.log(this.id);
 
       if(id !== 0){
 
