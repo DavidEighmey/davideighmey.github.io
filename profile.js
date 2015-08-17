@@ -50,8 +50,9 @@ $(function(){
 
   
   $('#answerButton').click(function() {
+    console.log(id);
+
     $.ajax({
-      console.log(id);
 
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/answers?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
