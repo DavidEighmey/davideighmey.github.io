@@ -109,15 +109,21 @@ $(function(){
 
 
   $('#login-out').click(function() {
+    if(id != null){
 
+      var id = null;
+      var access = null;
+      document.getElementById("SignIn").innerHTML = "Signed out";
+      document.getElementById("profileAnswer").innerHTML = " ";
+      document.getElementById("profileBadges").innerHTML = " ";
+      document.getElementById("profileFavorite").innerHTML = " ";
 
-    var id = null;
-    var access = null;
-    document.getElementById("SignIn").innerHTML = "Signed out";
-    document.getElementById("profileAnswer").innerHTML = " ";
-    document.getElementById("profileBadges").innerHTML = " ";
-    document.getElementById("profileFavorite").innerHTML = " ";
-            
+    } else {
+      document.getElementById("SignIn").innerHTML = "Please sign in first";
+      document.getElementById("profileAnswer").innerHTML = " ";
+      document.getElementById("profileBadges").innerHTML = " ";
+      document.getElementById("profileFavorite").innerHTML = " ";
+    }
   });
 });
 });
