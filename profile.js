@@ -4,7 +4,7 @@
 $(document).ready(function() {
  
 $(function(){
-   var id = null;
+  var id = 0;
   var access = null;
 // Initialize library
   SE.init({ 
@@ -99,10 +99,10 @@ $(function(){
         url: 'https://api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow',
         success: function (response) {
           console.log(response);
-           if (response.items.length == false){
+           if (response.items.length == 0){
               document.getElementById("profileFavorite").innerHTML +="Favorites: 0 <br>";
               console.log('api.stackexchange.com/2.2/users/'+ id +'/favorites?order=desc&sort=activity&site=stackoverflow')
-            } else {
+            } else {  
               for (var i in response.items){
                 document.getElementById("profileFavorite").innerHTML += "Favorites: <a href=" + i.link+ ">" + i.title +"</a><br>"
               }
@@ -116,7 +116,7 @@ $(function(){
   $('#login-out').click(function() {
     console.log(id);
 
-    if(id !== null){
+    if(id !== 0){
 
       var id = null;
       var access = null;
