@@ -4,9 +4,6 @@
 $(document).ready(function() {
   var id = 0;
   var access = null;
-$(function(){
-  
-// Initialize library
   $('#login-out').click(function() {
       console.log(id);
 
@@ -26,6 +23,10 @@ $(function(){
         document.getElementById("profileFavorite").innerHTML = " ";
       }
     });
+$(function(){
+  
+// Initialize library
+  
   SE.init({ 
     // Parameters obtained by registering an app, these are specific to the SE
     //   documentation site
