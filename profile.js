@@ -2,10 +2,10 @@
 //   However, the library has no jQuery dependency
 
 $(document).ready(function() {
- 
-$(function(){
   var id = 0;
   var access = null;
+$(function(){
+  
 // Initialize library
   $('#login-out').click(function() {
       console.log(id);
