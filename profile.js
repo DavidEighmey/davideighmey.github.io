@@ -116,7 +116,7 @@ $(function(){
   $('#login-out').click(function() {
     console.log(id);
 
-    if(id != null){
+    if(id !== null){
 
       var id = null;
       var access = null;
