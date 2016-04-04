@@ -1,21 +1,145 @@
-body{
-	padding-right: 50px;
-	padding-left: 50px;
-	background: #000000;
-	background: url("background.png");
-	color: white;
-
-}
 h1 {
+	text-align: center;
+	font-size: 60px;
+}
+h2{
+	color: #FFFFFF;
+	text-align: center;
+}
+h4{
 	text-align: center;
 }
 
-.paging {
-	text-align: right;
+body {
+	background: url("img/blizzbackground.png") repeat-y;
+	background-attachment: fixed;
+
+	background-position: center; 
+}
+.jumbotron{
+	background: #000000 url('img/scroll.png') no-repeat center center;
 }
 
-#thumbnail {
-	float: left;
-	margin-right: 10px;
+
+.topUser{
+	background: url("img/blizzbackground.png");
 }
 
+.scroll{
+	background: url("img/scroll.png");
+}
+.textCenter{
+	text-align: center;
+}
+
+.recent{
+	background: url("img/blizzbackground.png");
+}
+.topUserBackground{
+	background: url("img/blizzcon.jpg");
+	background-position: center; 
+
+}
+
+#tagsHeader{
+	background: url("img/blizzcon3.jpg");
+	color:#FFFFFF;
+}
+
+#userHeader{
+	background: url("img/hstone.jpg");
+	color:#FFFFFF;
+
+}
+
+#userBackground{
+	background: url();
+
+}
+
+#tagQuestions{
+	background: url();
+	
+}
+
+#tagsButtons{
+	background: url("img/sky.jpg");
+	color: #000000;
+
+}
+#tagsButtonFont{
+	color: #000000;
+}
+.panel.panel-default.panel-heading.ng-binding{
+	color:#FFFFFF;
+	background: #1678c3;
+}
+.btn.btn-default.individualButtons{
+	color:#FFFFFF;
+	background: #1678c3;
+}
+
+#badgesHeader{
+	background: url("img/legion3.jpg");
+	color:#FFFFFF;
+}
+#questionBadge{
+	background: url("img/artwork7.jpg");
+	color: #FFFFFF;
+}
+#moderationBadge{
+	background: url("img/demonHunter.jpg");
+	color: #FFFFFF;
+}
+#answerBadge{
+	background: url("img/pharah.jpg");
+		background-position: center; 
+
+	color: #000000;
+}
+#participationBadge{
+	background: url("img/monk.jpg");
+
+	color: #FFFFFF;
+}
+#otherBadge{
+	background: url("img/world.jpg");
+background-position: center; 
+
+	color: #FFFFFF;
+}
+#tagBadge{
+	background: url("img/sc2.png");
+
+	color: #FFFFFF;
+}
+
+
+#questionHeader{
+	background: url("img/heroes.png");
+
+	color:#FFFFFF;
+}
+#questionBackground{
+	background: url();
+	 
+
+}
+search-questions > .searchAnswer > #resultHeader{
+	background: url("img/lotv.jpeg");
+	color: #FFFFFF;
+
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 80%;
+      margin: auto;
+  }
+
+.ng-scope > .panel.panel-default > .panel-body .answer {
+	display: none;
+}
+.ng-scope > tag-questions > .panel.panel-default > .panel-body .answer {
+	display: none;
+}

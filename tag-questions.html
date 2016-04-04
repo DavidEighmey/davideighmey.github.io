@@ -1,0 +1,61 @@
+  <!-- tag questions -->
+
+<div class="panel panel-default">
+
+            <div class="panel-heading">
+
+              <h3 class="panel-title">{{product.question}}<div class="pull-right"> Asked By: {{product.askedBy}}</div></h3>
+              {{product.askedOn | date}}<div class="pull-right">Tags: {{product.tag}}</div>
+          </div>
+             <div class="panel-body">
+              
+              <div class="pull-left"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star">Favorite </span></button></div>
+              
+              
+              
+
+              
+              <em class="pull-right">Answers: {{product.answers.length}} Votes: {{product.votes}} <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button></em>
+                    <div class="answer">
+                      <ul ><br><br>
+                      
+                                                            
+                              <h4> Answers </h4>
+                              <li ng-repeat="answer in product.answers">
+
+                                <blockquote>
+                                   <strong>{{answer.upVotes}} Up Votes</strong> <div class="pull-right"><button type="button" class="btn btn-default" >
+                                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                                    </button></div>
+                                    <div class="pull-right"><button type="button" class="btn btn-default" >
+                                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                    </button></div>
+                                  {{answer.body}}
+                                  <cite class="clearfix">—{{answer.author}}  on {{answer.createdOn | date}}</cite>
+                                </blockquote>
+                              </li>
+                            </ul>
+
+                            <!--  Answer Form -->
+                            <form name="reviewForm" role="form" ng-controller="ReviewController as answers" ng-submit="answers.addAnswer(product)">
+                              <!--  Live Preview -->
+                              <blockquote ng-show="answers.answer.body">
+                                
+                                {{answers.answer.body}}
+                                <cite class="clearfix">—{{answers.answer.author}}</cite>
+                              </blockquote>
+
+                              <!--  Answer Form -->
+                              <h4>Submit an Answer</h4>
+                              
+                              <fieldset class="form-group">
+                                <textarea ng-model="answers.answer.body" class="form-control" placeholder="Write an Answer" title="Answer"></textarea>
+                              </fieldset>
+                             
+                              <fieldset class="form-group">
+                                <input type="submit" class="btn btn-primary pull-right" value="Submit Answer" />
+                              </fieldset>
+                          </form>    
+          </div>
+    </div>
+</div>

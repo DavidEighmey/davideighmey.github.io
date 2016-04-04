@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html ng-app="blizz">
+<head>
+	<meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!--<script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>-->
+        <script type='text/javascript' src='custom.js'></script>
+
+
+</head>
+<body>
+	<title>Blizzard Stack Exhange</title>
+	<!-- nav bar -->
+	<nav-bar></nav-bar>
+
+<!-- ar -->
+
+    <!-- badge header -->
+
+    <div class="badges">
+
+    <div class="well" id="badgesHeader">
+    <div class="page-description" style="width: 100%">
+      <h1>Badges</h1>
+            <p class="textCenter">
+                Besides gaining reputation with your questions and answers, you receive badges for being especially helpful. Badges appear on your profile page, flair, and your posts.
+            </p>
+        </div>
+    </div>
+
+
+<!-- question badge -->
+
+    <div class="col-md-4">
+      <div class="well" id="questionBadge">
+            <div class="badge-table general">
+              <h2>Question Badges</h2>         
+                <div class="badge-hierarchy">
+                  <div class="badge-row">
+                    <div class="badge-cell-large">
+                      <span class="check-cell">
+                      </span>
+                      <span class="badge-container">
+                        <a  href="http://stackoverflow.com//help/badges/222/altruist" 
+                          title="bronze badge: First bounty you manually award on another person&#39;s question"
+                          class="badge"><span class="badge3"></span>&nbsp;Altruist</a>
+                      </span>
+                    </div>
+                    <div class="badge-description">
+                        First bounty you manually award on another person&#39;s question
+                    </div>
+                      <div class="badge-count">
+                              <span class="item-multiplier"><span class="item-multiplier-count" title="5,377">5.4k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+              </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/221/benefactor" 
+        title="bronze badge: First bounty you manually award on your own question"
+        class="badge"><span class="badge3"></span>&nbsp;Benefactor</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            First bounty you manually award on your own question
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="26,077">26.1k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/4127/curious" 
+        title="bronze badge: Ask a good question on 5 separate days, and maintain a positive question record"
+        class="badge"><span class="badge3"></span>&nbsp;Curious</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Ask a good question on 5 separate days, and maintain a positive question record
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="178,696">178.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/4128/inquisitive" 
+        title="silver badge: Ask a good question on 30 separate days, and maintain a positive question record"
+        class="badge"><span class="badge2"></span>&nbsp;Inquisitive</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Ask a good question on 30 separate days, and maintain a positive question record
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="18,015">18k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/4129/socratic" 
+        title="gold badge: Ask a good question on 100 separate days, and maintain a positive question record"
+        class="badge"><span class="badge1"></span>&nbsp;Socratic</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Ask a good question on 100 separate days, and maintain a positive question record
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="2,001">2k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/33/favorite-question" 
+        title="silver badge: Question favorited by 25 users"
+        class="badge"><span class="badge2"></span>&nbsp;Favorite Question</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Question favorited by 25 users
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="22,392">22.4k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/36/stellar-question" 
+        title="gold badge: Question favorited by 100 users"
+        class="badge"><span class="badge1"></span>&nbsp;Stellar Question</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Question favorited by 100 users
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="3,023">3k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/219/investor" 
+        title="bronze badge: First bounty you offer on another person&#39;s question"
+        class="badge"><span class="badge3"></span>&nbsp;Investor</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            First bounty you offer on another person&#39;s question
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="10,719">10.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/20/nice-question" 
+        title="bronze badge: Question score of 10 or more"
+        class="badge"><span class="badge3"></span>&nbsp;Nice Question</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Question score of 10 or more
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="268,901">268.9k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/21/good-question" 
+        title="silver badge: Question score of 25 or more"
+        class="badge"><span class="badge2"></span>&nbsp;Good Question</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Question score of 25 or more
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="75,922">75.9k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/22/great-question" 
+        title="gold badge: Question score of 100 or more"
+        class="badge"><span class="badge1"></span>&nbsp;Great Question</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Question score of 100 or more
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="10,769">10.8k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/26/popular-question" 
+        title="bronze badge: Question with 1,000 views"
+        class="badge"><span class="badge3"></span>&nbsp;Popular Question</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Question with 1,000 views
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="2,167,054">2.2m</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/27/notable-question" 
+        title="silver badge: Question with 2,500 views"
+        class="badge"><span class="badge2"></span>&nbsp;Notable Question</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Question with 2,500 views
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="1,036,723">1.0m</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/28/famous-question" 
+        title="gold badge: Question with 10,000 views"
+        class="badge"><span class="badge1"></span>&nbsp;Famous Question</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Question with 10,000 views
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="242,939">242.9k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/220/promoter" 
+        title="bronze badge: First bounty you offer on your own question"
+        class="badge"><span class="badge3"></span>&nbsp;Promoter</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            First bounty you offer on your own question
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="46,032">46k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/10/scholar" 
+        title="bronze badge: Ask a question and accept an answer"
+        class="badge"><span class="badge3"></span>&nbsp;Scholar</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Ask a question and accept an answer
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="980,347">980.3k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/2/student" 
+        title="bronze badge: First question with score of 1 or more"
+        class="badge"><span class="badge3"></span>&nbsp;Student</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            First question with score of 1 or more
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="1,173,418">1.2m</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+            <div class="badge-hierarchy">
+    <div class="badge-row">
+        <div class="badge-cell-large">
+            <span class="check-cell">
+            </span>
+            <span class="badge-container">
+                <a  href="http://stackoverflow.com/help/badges/63/tumbleweed" 
+        title="bronze badge: Asked a question with zero score, no answers, no comments, and low views for a week"
+        class="badge"><span class="badge3"></span>&nbsp;Tumbleweed</a>
+            </span>
+        </div>
+        <div class="badge-description">
+            Asked a question with zero score, no answers, no comments, and low views for a week
+        </div>
+        <div class="badge-count">
+                <span class="item-multiplier"><span class="item-multiplier-count" title="577,176">577.2k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+            </div>
+
+         
+
+    </div>
+
+    </div>
+
+    <!-- moderation badges -->
+
+            <br>
+            <div class="well" id="moderationBadge">
+
+            <h2>Moderation Badges</h2>         <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/8/citizen-patrol" 
+                title="bronze badge: First flagged post"
+                class="badge"><span class="badge3"></span>&nbsp;Citizen Patrol</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    First flagged post
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="107,559">107.6k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/1002/deputy" 
+                title="silver badge: Raise 80 helpful flags"
+                class="badge"><span class="badge2"></span>&nbsp;Deputy</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Raise 80 helpful flags
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="6,052">6.1k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/1298/marshal" 
+                title="gold badge: Raise 500 helpful flags"
+                class="badge"><span class="badge1"></span>&nbsp;Marshal</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Raise 500 helpful flags
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="1,388">1.4k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/32/civic-duty" 
+                title="silver badge: Vote 300 or more times"
+                class="badge"><span class="badge2"></span>&nbsp;Civic Duty</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Vote 300 or more times
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="44,968">45k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/4/cleanup" 
+                title="bronze badge: First rollback"
+                class="badge"><span class="badge3"></span>&nbsp;Cleanup</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    First rollback
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="23,535">23.5k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/3108/constable" 
+                title="gold badge: Served as a pro-tem moderator for at least 1 year or through site graduation"
+                class="badge"><span class="badge1"></span>&nbsp;Constable</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Served as a pro-tem moderator for at least 1 year or through site graduation
+                </div>
+                <div class="badge-count">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/3109/sheriff" 
+                title="gold badge: Served as an elected moderator for at least 1 year"
+                class="badge"><span class="badge1"></span>&nbsp;Sheriff</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Served as an elected moderator for at least 1 year
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="24">24</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/7/critic" 
+                title="bronze badge: First down vote"
+                class="badge"><span class="badge3"></span>&nbsp;Critic</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    First down vote
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="206,245">206.2k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/2278/custodian" 
+                title="bronze badge: Complete at least one review task. This badge is awarded once per review type"
+                class="badge"><span class="badge3"></span>&nbsp;Custodian</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Complete at least one <a href="http://stackoverflow.com/review">review</a> task. This badge is awarded once per review type
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="265,281">265.3k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/1478/reviewer" 
+                title="silver badge: Complete at least 250 review tasks. This badge is awarded once per review type"
+                class="badge"><span class="badge2"></span>&nbsp;Reviewer</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Complete at least 250 <a href="http://stackoverflow.com/review">review</a> tasks. This badge is awarded once per review type
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="17,175">17.2k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/2279/steward" 
+                title="gold badge: Complete at least 1,000 review tasks. This badge is awarded once per review type"
+                class="badge"><span class="badge1"></span>&nbsp;Steward</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Complete at least 1,000 <a href="http://stackoverflow.com/review">review</a> tasks. This badge is awarded once per review type
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="5,531">5.5k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/37/disciplined" 
+                title="bronze badge: Delete own post with score of 3 or higher"
+                class="badge"><span class="badge3"></span>&nbsp;Disciplined</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Delete own post with score of 3 or higher
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="7,387">7.4k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/3/editor" 
+                title="bronze badge: First edit"
+                class="badge"><span class="badge3"></span>&nbsp;Editor</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    First edit
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="1,098,880">1.1m</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/12/strunk-white" 
+                title="silver badge: Edit 80 posts"
+                class="badge"><span class="badge2"></span>&nbsp;Strunk &amp; White</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Edit 80 posts
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="8,978">9k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/223/copy-editor" 
+                title="gold badge: Edit 500 posts (excluding own or deleted posts and tag edits)"
+                class="badge"><span class="badge1"></span>&nbsp;Copy Editor</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Edit 500 posts (excluding own or deleted posts and tag edits)
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="1,653">1.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/155/electorate" 
+                title="gold badge: Vote on 600 questions and 25% or more of total votes are on questions"
+                class="badge"><span class="badge1"></span>&nbsp;Electorate</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Vote on 600 questions and 25% or more of total votes are on questions
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="8,339">8.3k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/1287/excavator" 
+                title="bronze badge: Edit first post that was inactive for 6 months"
+                class="badge"><span class="badge3"></span>&nbsp;Excavator</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Edit first post that was inactive for 6 months
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="66,512">66.5k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/1286/archaeologist" 
+                title="silver badge: Edit 100 posts that were inactive for 6 months"
+                class="badge"><span class="badge2"></span>&nbsp;Archaeologist</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Edit 100 posts that were inactive for 6 months
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="953">953</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/5/organizer" 
+                title="bronze badge: First retag"
+                class="badge"><span class="badge3"></span>&nbsp;Organizer</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    First retag
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="74,677">74.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/38/peer-pressure" 
+                title="bronze badge: Delete own post with score of -3 or lower"
+                class="badge"><span class="badge3"></span>&nbsp;Peer Pressure</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Delete own post with score of -3 or lower
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="83,200">83.2k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/1276/proofreader" 
+                title="bronze badge: Approve or reject 100 suggested edits"
+                class="badge"><span class="badge3"></span>&nbsp;Proofreader</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Approve or reject 100 suggested edits
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="10,136">10.1k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/805/sportsmanship" 
+                title="silver badge: Up vote 100 answers on questions where an answer of yours has a positive score"
+                class="badge"><span class="badge2"></span>&nbsp;Sportsmanship</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Up vote 100 answers on questions where an answer of yours has a positive score
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="1,846">1.8k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/804/suffrage" 
+                title="bronze badge: Use 30 votes in a day"
+                class="badge"><span class="badge3"></span>&nbsp;Suffrage</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Use 30 votes in a day
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="24,861">24.9k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/6/supporter" 
+                title="bronze badge: First up vote"
+                class="badge"><span class="badge3"></span>&nbsp;Supporter</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    First up vote
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="710,766">710.8k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/1224/synonymizer" 
+                title="bronze badge: First approved tag synonym"
+                class="badge"><span class="badge3"></span>&nbsp;Synonymizer</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    First approved <a href="http://stackoverflow.com/tags/synonyms">tag synonym</a>
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="672">672</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/254/tag-editor" 
+                title="bronze badge: First tag wiki edit"
+                class="badge"><span class="badge3"></span>&nbsp;Tag Editor</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    First tag wiki edit
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="15,553">15.6k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/1656/research-assistant" 
+                title="silver badge: Edit 50 tag wikis"
+                class="badge"><span class="badge2"></span>&nbsp;Research Assistant</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Edit 50 tag wikis
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="212">212</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/11/taxonomist" 
+                title="silver badge: Create a tag used by 50 questions"
+                class="badge"><span class="badge2"></span>&nbsp;Taxonomist</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Create a tag used by 50 questions
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="8,900">8.9k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+                    <div class="badge-hierarchy">
+            <div class="badge-row">
+                <div class="badge-cell-large">
+                    <span class="check-cell">
+                    </span>
+                    <span class="badge-container">
+                        <a  href="http://stackoverflow.com/help/badges/1108/vox-populi" 
+                title="bronze badge: Use the maximum 40 votes in a day"
+                class="badge"><span class="badge3"></span>&nbsp;Vox Populi</a>
+                    </span>
+                </div>
+                <div class="badge-description">
+                    Use the maximum 40 votes in a day
+                </div>
+                <div class="badge-count">
+                        <span class="item-multiplier"><span class="item-multiplier-count" title="14,077">14.1k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+         </div>
+    </div>
+
+
+    <!-- Answer Badges -->
+
+
+<div class="col-md-4">
+
+  <div class="well" id="answerBadge">
+
+
+ <h2>Answer Badges</h2>         <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/19/enlightened" 
+            title="silver badge: First to answer and accepted with score of 10 or more"
+            class="badge"><span class="badge2"></span>&nbsp;Enlightened</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                First to answer and accepted with score of 10 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="189,807">189.8k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/4368/explainer" 
+            title="bronze badge: Edit and answer 1 question (both actions within 12 hours, answer score &gt; 0)"
+            class="badge"><span class="badge3"></span>&nbsp;Explainer</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Edit and answer 1 question (both actions within 12 hours, answer score &gt; 0)
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="34,775">34.8k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/4369/refiner" 
+            title="silver badge: Edit and answer 50 questions (both actions within 12 hours, answer score &gt; 0)"
+            class="badge"><span class="badge2"></span>&nbsp;Refiner</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Edit and answer 50 questions (both actions within 12 hours, answer score &gt; 0)
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="1,000">1k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/4370/illuminator" 
+            title="gold badge: Edit and answer 500 questions (both actions within 12 hours, answer score &gt; 0)"
+            class="badge"><span class="badge1"></span>&nbsp;Illuminator</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Edit and answer 500 questions (both actions within 12 hours, answer score &gt; 0)
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="34">34</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/15/generalist" 
+            title="silver badge: Provide non-wiki answers of 15 total score in 20 of top 40 tags"
+            class="badge"><span class="badge2"></span>&nbsp;Generalist</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Provide non-wiki answers of 15 total score in 20 of top 40 tags
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="584">584</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/18/guru" 
+            title="silver badge: Accepted answer and score of 40 or more"
+            class="badge"><span class="badge2"></span>&nbsp;Guru</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Accepted answer and score of 40 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="51,833">51.8k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/23/nice-answer" 
+            title="bronze badge: Answer score of 10 or more"
+            class="badge"><span class="badge3"></span>&nbsp;Nice Answer</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Answer score of 10 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="590,292">590.3k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/24/good-answer" 
+            title="silver badge: Answer score of 25 or more"
+            class="badge"><span class="badge2"></span>&nbsp;Good Answer</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Answer score of 25 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="167,941">167.9k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/25/great-answer" 
+            title="gold badge: Answer score of 100 or more"
+            class="badge"><span class="badge1"></span>&nbsp;Great Answer</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Answer score of 100 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="24,453">24.5k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/62/populist" 
+            title="gold badge: Highest scoring answer that outscored an accepted answer with score of more than 10 by more than 2x"
+            class="badge"><span class="badge1"></span>&nbsp;Populist</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Highest scoring answer that outscored an accepted answer with score of more than 10 by more than 2x
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="8,439">8.4k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/95/reversal" 
+            title="gold badge: Provide an answer of +20 score to a question of -5 score"
+            class="badge"><span class="badge1"></span>&nbsp;Reversal</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Provide an answer of +20 score to a question of -5 score
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="221">221</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/837/revival" 
+            title="bronze badge: Answer more than 30 days after a question was asked as first answer scoring 2 or more"
+            class="badge"><span class="badge3"></span>&nbsp;Revival</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Answer more than 30 days after a question was asked as first answer scoring 2 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="183,055">183.1k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/17/necromancer" 
+            title="silver badge: Answer a question more than 60 days later with score of 5 or more"
+            class="badge"><span class="badge2"></span>&nbsp;Necromancer</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Answer a question more than 60 days later with score of 5 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="210,148">210.1k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/14/self-learner" 
+            title="bronze badge: Answer your own question with score of 3 or more"
+            class="badge"><span class="badge3"></span>&nbsp;Self-Learner</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Answer your own question with score of 3 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="70,193">70.2k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/1/teacher" 
+            title="bronze badge: Answer a question with score of 1 or more"
+            class="badge"><span class="badge3"></span>&nbsp;Teacher</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Answer a question with score of 1 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="803,971">804k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/225/tenacious" 
+            title="silver badge: Zero score accepted answers: more than 5 and 20% of total"
+            class="badge"><span class="badge2"></span>&nbsp;Tenacious</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Zero score accepted answers: more than 5 and 20% of total
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="30,483">30.5k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/226/unsung-hero" 
+            title="gold badge: Zero score accepted answers: more than 10 and 25% of total"
+            class="badge"><span class="badge1"></span>&nbsp;Unsung Hero</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Zero score accepted answers: more than 10 and 25% of total
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="11,596">11.6k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        </div>
+        </div>
+
+        <!-- Tag Badges -->
+        <br>
+    <div class="well" id="tagBadge">
+        <h2>Tag Badges</h2>
+            <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges?tab=tags&filter=bronze" 
+            title="bronze badge: Earn at least 100 total score for at least 20 non-community wiki answers in the Bronze Badge tag"
+            class="badge"><span class="badge3"></span>&nbsp;Bronze Badge</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                You must have a total score of 100 in at least 20 non-community wiki answers to achieve this badge.
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="78,231">78.2k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges?tab=tags&filter=silver" 
+            title="silver badge: Earn at least 400 total score for at least 80 non-community wiki answers in the Silver Badge tag"
+            class="badge"><span class="badge2"></span>&nbsp;Silver Badge</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                You must have a total score of 400 in at least 80 non-community wiki answers to achieve this badge.
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="14,766">14.8k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges?tab=tags&filter=gold" 
+            title="gold badge: Earn at least 1000 total score for at least 200 non-community wiki answers in the Gold Badge tag"
+            class="badge"><span class="badge1"></span>&nbsp;Gold Badge</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                You must have a total score of 1000 in at least 200 non-community wiki answers to achieve this badge.
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="4,484">4.5k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+            </div>
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+    </div>
+
+
+
+    <!-- participation Badges -->
+    <div class="col-md-4">
+        <div class="well" id="participationBadge">
+         <h2>Participation Badges</h2>         <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/9/autobiographer" 
+            title="bronze badge: Complete &quot;About Me&quot; section of user profile"
+            class="badge"><span class="badge3"></span>&nbsp;Autobiographer</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Complete &quot;About Me&quot; section of user profile
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="454,032">454k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/1973/caucus" 
+            title="bronze badge: Visit an election during any phase of an active election and have enough reputation to cast a vote"
+            class="badge"><span class="badge3"></span>&nbsp;Caucus</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Visit an <a href="http://stackoverflow.com/election">election</a> during any phase of an active election and have enough reputation to cast a vote
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="228,687">228.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/1974/constituent" 
+            title="silver badge: Vote for a candidate in the final phase of an election"
+            class="badge"><span class="badge2"></span>&nbsp;Constituent</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Vote for a candidate in the final phase of an <a href="http://stackoverflow.com/election">election</a>
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="69,080">69.1k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/31/commentator" 
+            title="bronze badge: Leave 10 comments"
+            class="badge"><span class="badge3"></span>&nbsp;Commentator</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Leave 10 comments
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="480,745">480.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/94/pundit" 
+            title="silver badge: Leave 10 comments with score of 5 or more"
+            class="badge"><span class="badge2"></span>&nbsp;Pundit</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Leave 10 comments with score of 5 or more
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="5,897">5.9k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/71/enthusiast" 
+            title="silver badge: Visit the site each day for 30 consecutive days. (Days are counted in UTC.)"
+            class="badge"><span class="badge2"></span>&nbsp;Enthusiast</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Visit the site each day for 30 consecutive days. (Days are counted in <a href="http://en.wikipedia.org/wiki/Coordinated_Universal_Time" rel="nofollow">UTC</a>.)
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="101,672">101.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/83/fanatic" 
+            title="gold badge: Visit the site each day for 100 consecutive days. (Days are counted in UTC.)"
+            class="badge"><span class="badge1"></span>&nbsp;Fanatic</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Visit the site each day for 100 consecutive days. (Days are counted in <a href="http://en.wikipedia.org/wiki/Coordinated_Universal_Time" rel="nofollow">UTC</a>.)
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="15,895">15.9k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/144/mortarboard" 
+            title="bronze badge: Earn at least 200 reputation (the daily maximum) in a single day"
+            class="badge"><span class="badge3"></span>&nbsp;Mortarboard</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Earn at least 200 reputation (the <a href="http://stackoverflow.com/help/whats-reputation">daily maximum</a>) in a single day
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="21,672">21.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/145/epic" 
+            title="silver badge: Earn 200 daily reputation 50 times"
+            class="badge"><span class="badge2"></span>&nbsp;Epic</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Earn 200 daily reputation 50 times
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="525">525</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/146/legendary" 
+            title="gold badge: Earn 200 daily reputation 150 times"
+            class="badge"><span class="badge1"></span>&nbsp;Legendary</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Earn 200 daily reputation 150 times
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="191">191</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/892/precognitive" 
+            title="bronze badge: Followed the Area 51 proposal for this site before it entered the commitment phase"
+            class="badge"><span class="badge3"></span>&nbsp;Precognitive</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Followed the <a href="http://area51.stackexchange.com/">Area 51</a> proposal for this site before it entered the commitment phase
+            </div>
+            <div class="badge-count">
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/30/beta" 
+            title="silver badge: Voted 10 times, added 3 posts score &gt; 0, and visited the site on 3 separate days during the private beta"
+            class="badge"><span class="badge2"></span>&nbsp;Beta</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Voted 10 times, added 3 posts score &gt; 0, and visited the site on 3 separate days during the private beta
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="2,514">2.5k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/900/quorum" 
+            title="bronze badge: One post with score of 2 on meta"
+            class="badge"><span class="badge3"></span>&nbsp;Quorum</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                One post with score of 2 on <a href="http://meta.stackoverflow.com">meta</a>
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="18,827">18.8k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/901/convention" 
+            title="silver badge: 10 posts with score of 2 on meta"
+            class="badge"><span class="badge2"></span>&nbsp;Convention</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                10 posts with score of 2 on <a href="http://meta.stackoverflow.com">meta</a>
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="1,618">1.6k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/884/talkative" 
+            title="bronze badge: Post 10 messages, with 1 or more starred, in chat"
+            class="badge"><span class="badge3"></span>&nbsp;Talkative</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Post 10 messages, with 1 or more starred, in <a href="http://chat.stackoverflow.com">chat</a>
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="6,664">6.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/998/outspoken" 
+            title="silver badge: Post 10 messages in chat starred by 10 different users"
+            class="badge"><span class="badge2"></span>&nbsp;Outspoken</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Post 10 messages in <a href="http://chat.stackoverflow.com">chat</a> starred by 10 different users
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="798">798</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+                </div>
+                <div class="badge-hierarchy">
+        <div class="badge-row">
+            <div class="badge-cell-large">
+                <span class="check-cell">
+                </span>
+                <span class="badge-container">
+                    <a  href="http://stackoverflow.com/help/badges/13/yearling" 
+            title="silver badge: Active member for a year, earning at least 200 reputation"
+            class="badge"><span class="badge2"></span>&nbsp;Yearling</a>
+                </span>
+            </div>
+            <div class="badge-description">
+                Active member for a year, earning at least 200 reputation
+            </div>
+            <div class="badge-count">
+                    <span class="item-multiplier"><span class="item-multiplier-count" title="624,644">624.6k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!-- Other Badges -->
+<br>
+<div class="well"id="otherBadge">      
+
+ <h2>Other Badges</h2>         <div class="badge-hierarchy">
+<div class="badge-row">
+    <div class="badge-cell-large">
+        <span class="check-cell">
+        </span>
+        <span class="badge-container">
+            <a  href="http://stackoverflow.com/help/badges/1306/analytical" 
+    title="bronze badge: Visited every section of the FAQ (retired)"
+    class="badge"><span class="badge3"></span>&nbsp;Analytical</a>
+        </span>
+    </div>
+    <div class="badge-description">
+        Visited every section of the FAQ (retired)
+    </div>
+    <div class="badge-count">
+            <span class="item-multiplier"><span class="item-multiplier-count" title="44,055">44.1k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+    </div>
+    <div class="clear"></div>
+</div>
+        </div>
+        <div class="badge-hierarchy">
+<div class="badge-row">
+    <div class="badge-cell-large">
+        <span class="check-cell">
+        </span>
+        <span class="badge-container">
+            <a  href="http://stackoverflow.com/help/badges/260/announcer" 
+    title="bronze badge: Share a link to a question later visited by 25 unique IP addresses"
+    class="badge"><span class="badge3"></span>&nbsp;Announcer</a>
+        </span>
+    </div>
+    <div class="badge-description">
+        Share a link to a question later visited by 25 unique IP addresses
+    </div>
+    <div class="badge-count">
+            <span class="item-multiplier"><span class="item-multiplier-count" title="39,659">39.7k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="badge-row">
+    <div class="badge-cell-large">
+        <span class="check-cell">
+        </span>
+        <span class="badge-container">
+            <a  href="http://stackoverflow.com/help/badges/261/booster" 
+    title="silver badge: Share a link to a question later visited by 300 unique IP addresses"
+    class="badge"><span class="badge2"></span>&nbsp;Booster</a>
+        </span>
+    </div>
+    <div class="badge-description">
+        Share a link to a question later visited by 300 unique IP addresses
+    </div>
+    <div class="badge-count">
+            <span class="item-multiplier"><span class="item-multiplier-count" title="1,531">1.5k</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="badge-row">
+    <div class="badge-cell-large">
+        <span class="check-cell">
+        </span>
+        <span class="badge-container">
+            <a  href="http://stackoverflow.com/help/badges/262/publicist" 
+    title="gold badge: Share a link to a question later visited by 1000 unique IP addresses"
+    class="badge"><span class="badge1"></span>&nbsp;Publicist</a>
+        </span>
+    </div>
+    <div class="badge-description">
+        Share a link to a question later visited by 1000 unique IP addresses
+    </div>
+    <div class="badge-count">
+            <span class="item-multiplier"><span class="item-multiplier-count" title="568">568</span>&nbsp;<span class="item-multiplier-x">awarded</span></span>
+    </div>
+    <div class="clear"></div>
+</div>
+        </div>
+        <div class="badge-hierarchy">
+<div class="badge-row">
+    <div class="badge-cell-large">
+        <span class="check-cell">
+        </span>
+        <span class="badge-container">
+            <a  href="http://stackoverflow.com//help/badges/2600/informed" 
+    title="bronze badge: Read the entire tour page"
+    class="badge"><span class="badge3"></span>&nbsp;Informed</a>
+        </span>
+    </div>
+    <div class="badge-description">
+        Read the entire <a href="http://stackoverflow.com/tour">tour</a> page
+    </div>
+
+      </div>
+
+</div>
+
+
+</div>
+
+
+</div>
+</div>
+
+<search-questions></search-questions>
+
+
+    
+    
+</body>
+</html>

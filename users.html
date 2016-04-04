@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="blizz">
+<head>
+	<script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+ 
+  <link rel="stylesheet" type="text/css" href="custom.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+      <script type='text/javascript' src='custom.js'></script>
+
+
+</head>
+<body>
+	<title>Blizzard Stack Exhange</title>
+	<!-- nav bar -->
+	<nav-bar></nav-bar>
+
+            <!-- user header -->
+
+    <div class="well" id="userHeader">
+       <h1>Top Users</h1>
+     </div>
+
+      <!-- Users -->
+
+     <div class="users">
+        <div class="well" id="userBackground" >
+
+
+            <div ng-controller="StoreController as q" >
+
+              <div ng-repeat="user in q.usrs | orderBy:'-reputation'">
+              
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+
+                    <h3 class="panel-title center-block">{{user.name}}</h3>
+                    </div>
+                   <div class="panel-body">
+                    <div class="pull-left"><img ng-src="{{user.image}}" height="100" width="100" />  </div>
+                    <h3 class="pull-right">Reputation: {{user.reputation}}</h3>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+
+
+<search-questions></search-questions>
+      
+</body>
+</html>
